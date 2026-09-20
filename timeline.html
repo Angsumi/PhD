@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09131d" />
+    <meta name="description" content="PhD research timeline — from literature review to thesis defence, covering all phases of the cattle gut microbiome One Health study." />
+    <title>Research Timeline · Cattle Microbiome One Health</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <style>
+      :root {
+        --ink: #09131d;
+        --ink-2: #102434;
+        --paper: #f4f7f4;
+        --muted: #9db0b6;
+        --soft: #d7e5df;
+        --mint: #a5f3d0;
+        --mint-2: #4bd39b;
+        --coral: #ff9b7a;
+        --line: rgba(215, 229, 223, .16);
+        --max: 1180px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--ink); color: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+      a { color: inherit; text-decoration: none; }
+      .shell { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+
+      /* ── Header ── */
+      .topbar { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
+      .mark { display: flex; gap: 12px; align-items: center; font-size: 14px; font-weight: 750; letter-spacing: .03em; }
+      .mark-icon { width: 32px; height: 32px; border: 1px solid var(--mint); border-radius: 50%; display: grid; place-items: center; color: var(--mint); font-size: 17px; }
+      nav { display: flex; gap: 26px; color: var(--muted); font-size: 14px; }
+      nav a:hover, nav a:focus-visible { color: var(--mint); }
+      nav a.active { color: var(--mint); }
+
+      /* ── Hero ── */
+      .hero { padding: 92px 0 82px; }
+      .eyebrow { color: var(--mint); text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 22px; }
+      h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 72px); line-height: .98; letter-spacing: -.065em; font-weight: 700; }
+      .hero-copy { color: var(--soft); max-width: 620px; font-size: 19px; margin: 28px 0 0; }
+      h2 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; letter-spacing: -.045em; }
+
+      /* ── Duration bar ── */
+      .duration-bar { margin-top: 52px; display: flex; gap: 0; border: 1px solid var(--line); }
+      .dur-segment { flex: 1; padding: 18px 20px; border-right: 1px solid var(--line); text-align: center; }
+      .dur-segment:last-child { border-right: 0; }
+      .dur-segment strong { display: block; color: var(--coral); font-size: 28px; letter-spacing: -.04em; }
+      .dur-segment span { display: block; color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+      /* ── Timeline ── */
+      .section { padding: 92px 0; border-top: 1px solid var(--line); }
+      .section-head { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 52px; }
+      .section-intro { color: var(--muted); max-width: 440px; margin: 0; }
+
+      .timeline { position: relative; padding-left: 42px; }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 7px; top: 0; bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, var(--mint), var(--coral));
+        border-radius: 2px;
+      }
+
+      .phase { position: relative; margin-bottom: 56px; }
+      .phase:last-child { margin-bottom: 0; }
+
+      /* dot on the timeline rail */
+      .phase::before {
+        content: '';
+        position: absolute;
+        left: -42px; top: 6px;
+        width: 16px; height: 16px;
+        border-radius: 50%;
+        border: 3px solid var(--mint);
+        background: var(--ink);
+        z-index: 1;
+      }
+      .phase.coral::before { border-color: var(--coral); }
+
+      .phase-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+      .phase-label { color: var(--coral); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; white-space: nowrap; }
+      .phase h3 { margin: 0; font-size: 24px; letter-spacing: -.03em; }
+      .phase-months { color: var(--mint); font-size: 13px; font-weight: 700; margin-left: auto; white-space: nowrap; }
+      .phase-desc { color: var(--muted); font-size: 15px; margin: 6px 0 0; max-width: 680px; }
+
+      .tasks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+      .task { padding: 18px 22px; border: 1px solid var(--line); background: var(--ink-2); }
+      .task h4 { margin: 0 0 6px; font-size: 16px; color: var(--soft); }
+      .task p { margin: 0; font-size: 14px; color: var(--muted); }
+
+      /* ── Gantt chart ── */
+      .gantt-section { padding: 92px 0; border-top: 1px solid var(--line); }
+      .gantt { margin-top: 42px; }
+
+      /* month headers */
+      .gantt-header { display: grid; grid-template-columns: 200px repeat(36, 1fr); gap: 0; margin-bottom: 8px; }
+      .gantt-header span { font-size: 11px; color: var(--muted); text-align: center; font-weight: 700; letter-spacing: .05em; }
+      .gantt-header span:first-child { text-align: left; color: var(--soft); font-size: 12px; }
+
+      /* year markers */
+      .year-row { display: grid; grid-template-columns: 200px repeat(36, 1fr); gap: 0; margin-bottom: 4px; }
+      .year-row span:first-child { font-size: 12px; color: transparent; }
+      .year-marker { text-align: center; font-size: 12px; font-weight: 800; color: var(--mint); letter-spacing: .06em; }
+
+      .gantt-row { display: grid; grid-template-columns: 200px repeat(36, 1fr); gap: 0; align-items: center; min-height: 36px; border-bottom: 1px solid var(--line); }
+      .gantt-row:first-child { border-top: 1px solid var(--line); }
+      .gantt-label { font-size: 13px; font-weight: 600; color: var(--soft); padding-right: 12px; }
+      .gantt-bar { height: 22px; border-radius: 4px; min-width: 0; }
+      .bar-mint { background: linear-gradient(90deg, rgba(165,243,208,.6), rgba(165,243,208,.35)); border: 1px solid rgba(165,243,208,.4); }
+      .bar-coral { background: linear-gradient(90deg, rgba(255,155,122,.6), rgba(255,155,122,.35)); border: 1px solid rgba(255,155,122,.4); }
+      .bar-soft { background: linear-gradient(90deg, rgba(215,229,223,.4), rgba(215,229,223,.2)); border: 1px solid rgba(215,229,223,.25); }
+      .bar-mixed { background: linear-gradient(90deg, rgba(165,243,208,.4), rgba(255,155,122,.4)); border: 1px solid rgba(200,200,180,.35); }
+
+      /* ── Milestones ── */
+      .milestones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 52px; }
+      .milestone { padding: 24px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(165,243,208,.09), rgba(16,36,52,.75)); }
+      .milestone .phase-label { margin-bottom: 12px; }
+      .milestone h4 { margin: 0 0 8px; font-size: 18px; }
+      .milestone p { margin: 0; color: var(--muted); font-size: 14px; }
+
+      /* ── Footer ── */
+      footer { border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
+
+      @media (max-width: 760px) {
+        .shell { width: min(var(--max), calc(100% - 34px)); }
+        nav { display: none; }
+        .hero { padding: 64px 0; }
+        .section, .gantt-section { padding: 66px 0; }
+        .section-head { display: block; }
+        .section-intro { margin-top: 16px; }
+        .duration-bar { flex-direction: column; }
+        .dur-segment { border-right: 0; border-bottom: 1px solid var(--line); }
+        .dur-segment:last-child { border-bottom: 0; }
+        .tasks { grid-template-columns: 1fr; }
+        .phase-header { flex-wrap: wrap; }
+        .phase-months { margin-left: 0; }
+        .gantt { overflow-x: auto; }
+        .gantt-header, .gantt-row, .year-row { min-width: 900px; }
+        .milestones { grid-template-columns: 1fr; }
+        footer { display: block; }
+        footer span { display: block; margin-top: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="shell topbar">
+      <a class="mark" href="./index.html" aria-label="Research proposal home"><span class="mark-icon">◌</span><span>ONE HEALTH / CATTLE MICROBIOME</span></a>
+      <nav aria-label="Primary navigation"><a href="./index.html#question">The question</a><a href="./index.html#study">The study</a><a href="./index.html#methodology">Methodology</a><a href="./index.html#impact">Why it matters</a><a href="./timeline.html" class="active">Timeline</a></nav>
+    </header>
+
+    <main>
+      <section class="shell hero">
+        <p class="eyebrow">PhD research timeline · 3-year plan</p>
+        <h1>From hypothesis to thesis defence.</h1>
+        <p class="hero-copy">A structured 36-month research timeline covering literature review, fieldwork, multi-omics laboratory work, bioinformatics, integration modelling, and thesis writing.</p>
+
+        <div class="duration-bar">
+          <div class="dur-segment"><strong>Y1</strong><span>Foundation & fieldwork</span></div>
+          <div class="dur-segment"><strong>Y2</strong><span>Laboratory & sequencing</span></div>
+          <div class="dur-segment"><strong>Y3</strong><span>Analysis & thesis</span></div>
+        </div>
+      </section>
+
+      <!-- ── Detailed phases ── -->
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <h2>Research phases<br />in detail.</h2>
+            <p class="section-intro">Each phase builds on the previous one. Overlapping activities ensure continuous progress without bottlenecks.</p>
+          </div>
+
+          <div class="timeline">
+
+            <!-- Phase 1 -->
+            <div class="phase">
+              <div class="phase-header">
+                <span class="phase-label">Phase 1</span>
+                <h3>Literature review & study design</h3>
+                <span class="phase-months">Months 1 – 6</span>
+              </div>
+              <p class="phase-desc">Build the theoretical foundation. Survey existing research on cattle gut microbiomes, One Health frameworks, AMR in livestock, and plant-diet-microbiome interactions. Define hypotheses and finalise the sampling strategy.</p>
+              <div class="tasks">
+                <div class="task"><h4>Systematic review</h4><p>Catalogue existing studies on cattle metagenomics, humanization signatures, and AMR transfer pathways.</p></div>
+                <div class="task"><h4>Study design</h4><p>Finalise sample size (200 cattle), site selection across 3 climatic regions, and metadata collection protocols.</p></div>
+                <div class="task"><h4>Ethics & permissions</h4><p>Obtain IAEC approval, MoU with partner farms, and permissions for stray cattle sampling in urban areas.</p></div>
+                <div class="task"><h4>Pilot sampling</h4><p>Test collection, storage, and DNA extraction protocols with a small batch to validate the workflow.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase coral">
+              <div class="phase-header">
+                <span class="phase-label">Phase 2</span>
+                <h3>Field sampling & metadata collection</h3>
+                <span class="phase-months">Months 5 – 12</span>
+              </div>
+              <p class="phase-desc">Collect fecal samples from 100 domestic and 100 stray cattle across urban and rural settings. Record management practices, antibiotic history, human contact level, GPS location, and health status for each animal. Collect blood/PBMC from a matched subset of 30–40 animals.</p>
+              <div class="tasks">
+                <div class="task"><h4>Domestic cattle sampling</h4><p>100 animals from managed farms — fresh fecal samples, blood draws for the RNA-seq subset, and detailed husbandry records.</p></div>
+                <div class="task"><h4>Stray cattle sampling</h4><p>100 free-roaming animals from urban/peri-urban areas — fecal collection, observational health scoring, and environmental context notes.</p></div>
+                <div class="task"><h4>Metadata questionnaires</h4><p>Standardised forms for diet, antibiotic exposure, contact frequency, housing, and local environmental conditions.</p></div>
+                <div class="task"><h4>Sample processing & storage</h4><p>Aliquot, preserve in DNA/RNA stabilisers, and store at −80 °C within 4 hours of collection.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="phase">
+              <div class="phase-header">
+                <span class="phase-label">Phase 3</span>
+                <h3>DNA/RNA extraction & sequencing</h3>
+                <span class="phase-months">Months 10 – 18</span>
+              </div>
+              <p class="phase-desc">Extract high-quality nucleic acids from all samples. Perform whole-genome shotgun metagenomics on all 200 fecal samples. For the matched subset, add microbial metatranscriptomics and host blood/PBMC RNA-seq. Run plant DNA metabarcoding using chloroplast markers (trnL, rbcL, matK).</p>
+              <div class="tasks">
+                <div class="task"><h4>Fecal DNA extraction</h4><p>High-quality DNA from 200 samples for shotgun metagenomics and plant metabarcoding.</p></div>
+                <div class="task"><h4>Shotgun metagenomics</h4><p>Paired-end whole-genome sequencing for broad community and functional coverage.</p></div>
+                <div class="task"><h4>Metatranscriptomics</h4><p>Microbial RNA-seq from ~30–40 matched samples to capture active gene expression.</p></div>
+                <div class="task"><h4>Host RNA-seq & plant metabarcoding</h4><p>Blood/PBMC RNA-seq (15–20 per group) and fecal plant DNA profiling via chloroplast markers.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="phase coral">
+              <div class="phase-header">
+                <span class="phase-label">Phase 4</span>
+                <h3>Parasitology & resistome screening</h3>
+                <span class="phase-months">Months 12 – 18</span>
+              </div>
+              <p class="phase-desc">Examine fecal samples by microscopy and molecular confirmation for macroparasite diversity and zoonotic risk. Screen metagenomic reads against CARD, ResFinder, and MEGARes databases to map antimicrobial resistance gene profiles and assess mobility elements.</p>
+              <div class="tasks">
+                <div class="task"><h4>Fecal microscopy</h4><p>Identify helminth eggs, protozoan cysts, and other macroparasites using standard flotation and sedimentation techniques.</p></div>
+                <div class="task"><h4>Molecular parasite confirmation</h4><p>PCR-based confirmation of key zoonotic parasites detected microscopically.</p></div>
+                <div class="task"><h4>Resistome profiling</h4><p>Screen shotgun reads against CARD, ResFinder, and MEGARes for resistance gene abundance, diversity, and co-occurrence.</p></div>
+                <div class="task"><h4>Mobility element analysis</h4><p>Identify integrons, plasmid-associated ARGs, and insertion sequences linked to horizontal gene transfer.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="phase">
+              <div class="phase-header">
+                <span class="phase-label">Phase 5</span>
+                <h3>Bioinformatics & data analysis</h3>
+                <span class="phase-months">Months 16 – 28</span>
+              </div>
+              <p class="phase-desc">Process all sequencing data through quality filtering, host DNA removal, and taxonomic/functional annotation. Compare alpha and beta diversity, differential abundance, functional pathway enrichment, and dietary plant profiles between domestic and stray groups.</p>
+              <div class="tasks">
+                <div class="task"><h4>Quality control & preprocessing</h4><p>Adapter trimming, quality filtering, bovine DNA decontamination, and read-level QC across all datasets.</p></div>
+                <div class="task"><h4>Taxonomic & functional profiling</h4><p>Classify bacteria, archaea, viruses, and eukaryotes; annotate KEGG pathways, CAZymes, and virulence factors.</p></div>
+                <div class="task"><h4>Differential analysis</h4><p>Compare community composition, diversity metrics, and functional pathways between domestic vs. stray and urban vs. rural groups.</p></div>
+                <div class="task"><h4>Host transcriptome analysis</h4><p>Differential gene expression of immune, inflammatory, metabolic, and epithelial-barrier modules from blood/PBMC RNA-seq.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 6 -->
+            <div class="phase coral">
+              <div class="phase-header">
+                <span class="phase-label">Phase 6</span>
+                <h3>Multi-omics integration & modelling</h3>
+                <span class="phase-months">Months 24 – 32</span>
+              </div>
+              <p class="phase-desc">Connect all six datasets into a unified model: plant/diet exposure → gut microbiome composition → microbial gene activity → host gene expression → AMR and zoonotic risk. Use multivariate statistics and machine learning to identify the "humanization signature".</p>
+              <div class="tasks">
+                <div class="task"><h4>Correlation networks</h4><p>Build co-occurrence networks linking plant diet profiles, microbial taxa, active pathways, and host gene modules.</p></div>
+                <div class="task"><h4>Machine learning models</h4><p>Train classifiers to predict domestic vs. stray origin from microbiome features; identify the strongest predictive signatures.</p></div>
+                <div class="task"><h4>Causal pathway modelling</h4><p>Use structural equation modelling or mediation analysis to test the diet → microbiome → host response chain.</p></div>
+                <div class="task"><h4>One Health risk scoring</h4><p>Combine resistome, parasite, and zoonotic microbe data into a composite risk framework for public health interpretation.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 7 -->
+            <div class="phase">
+              <div class="phase-header">
+                <span class="phase-label">Phase 7</span>
+                <h3>Thesis writing & defence</h3>
+                <span class="phase-months">Months 28 – 36</span>
+              </div>
+              <p class="phase-desc">Draft the thesis, prepare manuscripts for peer-reviewed publication, present findings at conferences, and submit for defence. Translate key findings into actionable recommendations for livestock management and One Health policy.</p>
+              <div class="tasks">
+                <div class="task"><h4>Manuscript preparation</h4><p>Prepare 3–4 manuscripts covering metagenomics, multi-omics integration, resistome/parasitology, and the One Health framework.</p></div>
+                <div class="task"><h4>Thesis compilation</h4><p>Integrate all chapters — introduction, methods, results, discussion — into a unified thesis document.</p></div>
+                <div class="task"><h4>Conference presentations</h4><p>Present findings at national/international conferences on microbiome science, One Health, or veterinary public health.</p></div>
+                <div class="task"><h4>Defence & policy brief</h4><p>Defend the thesis and prepare a policy brief summarising actionable findings for livestock and public health stakeholders.</p></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Visual Gantt chart ── -->
+      <section class="gantt-section">
+        <div class="shell">
+          <div class="section-head">
+            <h2>At a glance.</h2>
+            <p class="section-intro">A visual overview of how the seven phases overlap across the 36-month PhD programme.</p>
+          </div>
+
+          <div class="gantt">
+            <!-- Year markers -->
+            <div class="year-row">
+              <span></span>
+              <span class="year-marker" style="grid-column: 2 / 14;">— Year 1 —</span>
+              <span class="year-marker" style="grid-column: 14 / 26;">— Year 2 —</span>
+              <span class="year-marker" style="grid-column: 26 / 38;">— Year 3 —</span>
+            </div>
+
+            <!-- Month headers -->
+            <div class="gantt-header">
+              <span>Activity</span>
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+              <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+              <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+              <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+              <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+              <span>31</span><span>32</span><span>33</span><span>34</span><span>35</span><span>36</span>
+            </div>
+
+            <!-- Rows: grid-column starts at 2 (month 1) -->
+            <div class="gantt-row">
+              <span class="gantt-label">Literature review</span>
+              <div class="gantt-bar bar-mint" style="grid-column: 2 / 8;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">Field sampling</span>
+              <div class="gantt-bar bar-coral" style="grid-column: 6 / 14;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">DNA/RNA extraction</span>
+              <div class="gantt-bar bar-mint" style="grid-column: 11 / 20;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">Parasitology & AMR</span>
+              <div class="gantt-bar bar-coral" style="grid-column: 13 / 20;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">Bioinformatics</span>
+              <div class="gantt-bar bar-soft" style="grid-column: 17 / 30;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">Multi-omics integration</span>
+              <div class="gantt-bar bar-mixed" style="grid-column: 25 / 34;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">Thesis & publications</span>
+              <div class="gantt-bar bar-mint" style="grid-column: 29 / 38;"></div>
+            </div>
+          </div>
+
+          <!-- Key milestones -->
+          <div class="milestones">
+            <div class="milestone">
+              <span class="phase-label">Month 6</span>
+              <h4>Review complete</h4>
+              <p>Literature review and study design finalised. Ethics approved. Pilot sampling validated.</p>
+            </div>
+            <div class="milestone">
+              <span class="phase-label">Month 12</span>
+              <h4>Samples collected</h4>
+              <p>All 200 fecal samples and matched blood/PBMC subset collected, processed, and stored at −80 °C.</p>
+            </div>
+            <div class="milestone">
+              <span class="phase-label">Month 24</span>
+              <h4>Data generated</h4>
+              <p>All sequencing, parasitology, and resistome screening complete. Raw data deposited and QC'd.</p>
+            </div>
+            <div class="milestone">
+              <span class="phase-label">Month 36</span>
+              <h4>Thesis defended</h4>
+              <p>Thesis submitted, manuscripts published or under review, and policy brief delivered.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+    <footer class="shell"><span>Angsuman Das</span><span>Dr. Kaushalendra</span><span>Dr. Awadhesh Kumar</span></footer>
+  </body>
+</html>
