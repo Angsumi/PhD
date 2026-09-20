@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09131d" />
+    <meta name="description" content="An integrative PhD proposal connecting dietary plant exposure, cattle gut metagenomics, microbial activity, host RNA-seq, antimicrobial resistance, and One Health risk." />
+    <title>Humanization of the Cattle Gut Microbiome · Integrative Multi-Omics</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <style>
+      :root {
+        --ink: #09131d;
+        --ink-2: #102434;
+        --paper: #f4f7f4;
+        --muted: #9db0b6;
+        --soft: #d7e5df;
+        --mint: #a5f3d0;
+        --mint-2: #4bd39b;
+        --coral: #ff9b7a;
+        --line: rgba(215, 229, 223, .16);
+        --max: 1180px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--ink); color: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+      a { color: inherit; text-decoration: none; }
+      .shell { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+      .topbar { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
+      .mark { display: flex; gap: 12px; align-items: center; font-size: 14px; font-weight: 750; letter-spacing: .03em; }
+      .mark-icon { width: 32px; height: 32px; border: 1px solid var(--mint); border-radius: 50%; display: grid; place-items: center; color: var(--mint); font-size: 17px; }
+      nav { display: flex; gap: 26px; color: var(--muted); font-size: 14px; }
+      nav a:hover, nav a:focus-visible { color: var(--mint); }
+      .hero { padding: 92px 0 82px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 72px; align-items: end; }
+      .eyebrow { color: var(--mint); text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 22px; }
+      h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 84px); line-height: .98; letter-spacing: -.065em; font-weight: 700; }
+      .hero-copy { color: var(--soft); max-width: 590px; font-size: 19px; margin: 28px 0 0; }
+      .hero-side { border-left: 1px solid var(--line); padding: 16px 0 8px 28px; }
+      .hero-side strong { display: block; font-size: 62px; line-height: 1; color: var(--coral); letter-spacing: -.06em; }
+      .hero-side span { display: block; color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 220px; }
+      .section { padding: 92px 0; border-top: 1px solid var(--line); }
+      .section-head { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 42px; }
+      h2 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; letter-spacing: -.045em; }
+      .section-intro { color: var(--muted); max-width: 440px; margin: 0; }
+      .comparison { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+      .profile { padding: 34px; min-height: 360px; }
+      .profile:first-child { background: rgba(165, 243, 208, .08); border-right: 1px solid var(--line); }
+      .profile h3 { margin: 0; font-size: 28px; letter-spacing: -.03em; }
+      .profile p { color: var(--muted); margin: 12px 0 34px; max-width: 380px; }
+      .tag { display: inline-flex; align-items: center; gap: 8px; color: var(--mint); font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; }
+      .tag::before { content: ''; width: 7px; height: 7px; background: currentColor; border-radius: 50%; }
+      .stray .tag { color: var(--coral); }
+      .facts { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; color: var(--soft); font-size: 15px; }
+      .facts li { padding-top: 12px; border-top: 1px solid var(--line); }
+      .bridge { margin-top: 18px; padding: 26px 30px; border: 1px solid rgba(255,155,122,.45); background: linear-gradient(90deg, rgba(255,155,122,.14), rgba(165,243,208,.08)); display: flex; justify-content: space-between; gap: 24px; align-items: center; }
+      .bridge strong { font-size: 19px; }
+      .bridge span { color: var(--soft); font-size: 14px; max-width: 510px; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .card { padding: 28px; border: 1px solid var(--line); min-height: 190px; background: var(--ink-2); }
+      .number { color: var(--coral); font-size: 14px; font-weight: 800; letter-spacing: .1em; }
+      .card h3 { margin: 30px 0 10px; font-size: 21px; line-height: 1.1; }
+      .card p { color: var(--muted); margin: 0; font-size: 15px; }
+      .method { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
+      .method-intro p { color: var(--muted); max-width: 350px; }
+      .steps { border-top: 1px solid var(--line); }
+      .step { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+      .step-index { color: var(--mint); font-size: 14px; font-weight: 800; }
+      .step h3 { margin: 0 0 5px; font-size: 19px; }
+      .step p { margin: 0; color: var(--muted); font-size: 15px; }
+      .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .evidence-card { padding: 26px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(165,243,208,.09), rgba(16,36,52,.75)); }
+      .evidence-card .number { color: var(--mint); }
+      .evidence-card h3 { margin: 20px 0 9px; font-size: 20px; line-height: 1.1; }
+      .evidence-card p { margin: 0; color: var(--muted); font-size: 15px; }
+      .evidence-card strong { color: var(--soft); font-weight: 700; }
+      .proof { margin-top: 42px; border-top: 1px solid var(--line); }
+      .proof-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+      .proof-row span { color: var(--mint); font-size: 14px; font-weight: 750; }
+      .proof-row p { margin: 0; color: var(--soft); font-size: 15px; }
+      .impact { background: var(--mint); color: var(--ink); border-top: 0; }
+      .impact .section-head { align-items: start; }
+      .impact .section-intro { color: #315548; }
+      .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid rgba(9,19,29,.2); border-bottom: 1px solid rgba(9,19,29,.2); }
+      .impact-item { padding: 30px 26px 34px 0; margin-right: 26px; border-right: 1px solid rgba(9,19,29,.2); }
+      .impact-item:last-child { border-right: 0; margin-right: 0; }
+      .impact-item h3 { font-size: 21px; margin: 0 0 10px; }
+      .impact-item p { margin: 0; color: #315548; font-size: 15px; }
+      .closing { padding: 100px 0 112px; text-align: center; }
+      .closing h2 { max-width: 820px; margin: 0 auto 26px; }
+      .closing p { max-width: 610px; margin: auto; color: var(--muted); }
+      footer { border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
+      @media (max-width: 760px) {
+        .shell { width: min(var(--max), calc(100% - 34px)); }
+        nav { display: none; }
+        .hero { padding: 64px 0; grid-template-columns: 1fr; gap: 42px; }
+        .hero-side { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
+        .section { padding: 66px 0; }
+        .section-head, .comparison, .method { grid-template-columns: 1fr; display: grid; gap: 24px; }
+        .profile:first-child { border-right: 0; border-bottom: 1px solid var(--line); }
+        .profile { min-height: auto; padding: 28px; }
+        .bridge { display: block; }
+        .bridge span { display: block; margin-top: 10px; }
+        .grid-3, .evidence-grid, .impact-grid { grid-template-columns: 1fr; }
+        .card { min-height: auto; }
+        .proof-row { grid-template-columns: 1fr; gap: 8px; }
+        .impact-item { border-right: 0; border-bottom: 1px solid rgba(9,19,29,.2); margin: 0; padding: 26px 0; }
+        .impact-item:last-child { border-bottom: 0; }
+        footer { display: block; }
+        footer span { display: block; margin-top: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="shell topbar">
+      <a class="mark" href="#top" aria-label="Research proposal home"><span class="mark-icon">◌</span><span>ONE HEALTH / CATTLE MICROBIOME</span></a>
+      <nav aria-label="Primary navigation"><a href="#question">The question</a><a href="#study">The study</a><a href="#methodology">Methodology</a><a href="#impact">Why it matters</a></nav>
+    </header>
+
+    <main id="top">
+      <section class="shell hero">
+        <div>
+          <p class="eyebrow">PhD research proposal · comparative metagenomics</p>
+          <h1>What happens to a cattle microbiome in a human world?</h1>
+          <p class="hero-copy">An integrative multi-omics study of domestic and stray cattle to understand how human contact, shared environments, diet, and veterinary care shape gut microbes, microbial activity, host response, and public-health risk.</p>
+        </div>
+        <div class="hero-side"><strong>200</strong><span>cattle across domestic and stray populations, sampled across three climatic regions</span></div>
+      </section>
+
+      <section class="section" id="question">
+        <div class="shell">
+          <div class="section-head"><h2>Two ways of living<br />beside us.</h2><p class="section-intro">The study uses cattle as a living model for a bigger One Health question: how do human environments alter animal microbiomes, and what might that mean for people?</p></div>
+          <div class="comparison">
+            <article class="profile"><span class="tag">Domestic cattle</span><h3>Managed proximity</h3><p>Raised in farming systems with regular human contact, controlled diets, veterinary care, and possible antibiotic exposure.</p><ul class="facts"><li>Close, repeated contact with people</li><li>Structured feed and housing</li><li>Routine veterinary intervention</li></ul></article>
+            <article class="profile stray"><span class="tag">Stray cattle</span><h3>Unmanaged proximity</h3><p>Living freely in human settlements, exposed to urban environments and often relying on scavenged food and waste.</p><ul class="facts"><li>Shared streets and public spaces</li><li>Variable food and environmental exposure</li><li>Minimal or irregular veterinary care</li></ul></article>
+          </div>
+          <div class="bridge"><strong>Between them is the signal.</strong><span>By comparing both populations, the study looks for a measurable “humanization” signature—microbial communities that reflect human-associated environments.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="study">
+        <div class="shell">
+          <div class="section-head"><h2>One question.<br />Six linked datasets.</h2><p class="section-intro">The proposal remains centred on microbiome humanization, while adding the measurements needed to follow the story from exposure to function and host response.</p></div>
+          <div class="grid-3">
+            <article class="card"><span class="number">01 / MICROBIOME</span><h3>Who is there?</h3><p>Map bacterial, archaeal, viral, and eukaryotic communities through whole-genome shotgun metagenomics.</p></article>
+            <article class="card"><span class="number">02 / MICROBIAL ACTIVITY</span><h3>What are they doing?</h3><p>Use microbial metatranscriptomics in a smaller subset to compare active pathways with the genes that are merely present.</p></article>
+            <article class="card"><span class="number">03 / HOST RESPONSE</span><h3>How does the host respond?</h3><p>Use blood or PBMC RNA-seq to profile immune, inflammatory, metabolic, and epithelial-barrier-related expression.</p></article>
+            <article class="card"><span class="number">04 / DIETARY PLANTS</span><h3>What entered the system?</h3><p>Use fecal plant DNA metabarcoding to track supplied fodder, grasses, weeds, crop residues, and food-associated plant material.</p></article>
+            <article class="card"><span class="number">05 / RESISTOME</span><h3>What can they resist?</h3><p>Screen metagenomic reads against CARD, ResFinder, and MEGARes to compare resistance genes and their mobility.</p></article>
+            <article class="card"><span class="number">06 / PARASITES</span><h3>What else is present?</h3><p>Combine microscopy and molecular confirmation to measure macroparasite diversity and potential zoonotic risk.</p></article>
+          </div>
+          <div class="bridge" style="margin-top: 18px;"><strong>Plant / diet exposure → gut microbiome → microbial gene activity → host gene expression</strong><span>This is the added layer of the same PhD story: not a separate plant-science project, but a way to explain why the microbiome differs and what those differences do.</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell method">
+          <div class="method-intro"><p class="eyebrow">Research pathway</p><h2>From field sample to usable evidence.</h2><p>The workflow is designed to move from careful collection to analysis that can support health surveillance, livestock management, and policy.</p></div>
+          <div class="steps">
+            <div class="step"><span class="step-index">01</span><div><h3>Collect</h3><p>Fresh fecal samples from 100 domestic and 100 stray cattle, with urban and rural contexts represented.</p></div></div>
+            <div class="step"><span class="step-index">02</span><div><h3>Sequence</h3><p>Extract high-quality DNA and use paired-end whole-genome shotgun sequencing for broad community coverage.</p></div></div>
+            <div class="step"><span class="step-index">03</span><div><h3>Profile function and exposure</h3><p>Measure diversity, taxonomic composition, dietary plant signatures, functional pathways, resistance genes, and parasite load between groups.</p></div></div>
+            <div class="step"><span class="step-index">04</span><div><h3>Read the host response</h3><p>Use a smaller matched subset—about 15–20 cattle per group—for microbial metatranscriptomics and host blood or PBMC RNA-seq.</p></div></div>
+            <div class="step"><span class="step-index">05</span><div><h3>Model the chain</h3><p>Use multivariate statistics and machine learning to connect plant exposure, microbiome composition, microbial activity, host response, and zoonotic risk.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="methodology">
+        <div class="shell">
+          <div class="section-head"><h2>How samples<br />become evidence.</h2><p class="section-intro">Each method answers a different part of the same question. The result is supported when independent measurements point to the same pattern.</p></div>
+          <div class="evidence-grid">
+            <article class="evidence-card"><span class="number">01 / FIELD DESIGN</span><h3>Collect comparable samples</h3><p>Sample <strong>100 domestic and 100 stray cattle</strong> across urban and rural settings, recording management, antibiotic exposure, human contact, location, and visible health information.</p></article>
+            <article class="evidence-card"><span class="number">02 / METAGENOMICS</span><h3>Measure what is present</h3><p>Extract DNA from feces and use shotgun sequencing. Quality-filter reads, remove bovine DNA, then classify organisms and annotate genes and pathways.</p></article>
+            <article class="evidence-card"><span class="number">03 / METATRANSCRIPTOMICS</span><h3>Measure what is active</h3><p>In a smaller matched subset, sequence microbial RNA to test whether pathways such as carbohydrate breakdown, SCFA production, methane metabolism, stress response, or AMR are being expressed.</p></article>
+            <article class="evidence-card"><span class="number">04 / HOST RNA-SEQ</span><h3>Measure the animal response</h3><p>Use blood or PBMC RNA-seq from about <strong>15–20 cattle per group</strong> to compare immune, inflammatory, metabolic, and epithelial-barrier gene expression.</p></article>
+            <article class="evidence-card"><span class="number">05 / PLANT DNA</span><h3>Measure dietary exposure</h3><p>Use chloroplast markers such as <strong>trnL, rbcL, or matK</strong> to identify fodder, grasses, weeds, crop residues, and human food-associated plants in fecal samples.</p></article>
+            <article class="evidence-card"><span class="number">06 / PARASITES + AMR</span><h3>Measure co-risk</h3><p>Combine microscopy, parasite PCR, and resistome screening against CARD, ResFinder, and MEGARes to map parasite burden and resistance-gene profiles.</p></article>
+          </div>
+          <div class="proof">
+            <div class="proof-row"><span>CLAIM</span><span>COMPARISON</span><span>SUPPORTING EVIDENCE</span></div>
+            <div class="proof-row"><p>Human proximity changes the microbiome.</p><p>Domestic vs. stray cattle; urban vs. rural context.</p><p>Taxa, alpha/beta diversity, functional pathways, and plant exposure signatures differ consistently.</p></div>
+            <div class="proof-row"><p>The difference is biologically active.</p><p>Metagenome vs. metatranscriptome in the matched subset.</p><p>Genes predicted to be present are also expressed, with activity linked to host or environmental metadata.</p></div>
+            <div class="proof-row"><p>The host responds to the microbial shift.</p><p>Microbiome activity vs. host RNA-seq expression.</p><p>Immune, inflammatory, metabolic, or barrier-related gene modules correlate after controlling for key confounders.</p></div>
+            <div class="proof-row"><p>Diet helps explain the pathway.</p><p>Plant profile → microbiome → activity → host response.</p><p>Plant diversity and composition predict microbial and host signatures in a reproducible multivariate model.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section impact" id="impact">
+        <div class="shell">
+          <div class="section-head"><h2>Why this matters<br />outside the lab.</h2><p class="section-intro">The goal is not only to describe microbial difference, but to make the relationship between animal health, human health, and environment easier to act on.</p></div>
+          <div class="impact-grid">
+            <article class="impact-item"><h3>Public health</h3><p>Identify microbial and genetic markers that can sharpen zoonotic disease and antimicrobial resistance surveillance.</p></article>
+            <article class="impact-item"><h3>Better stewardship</h3><p>Show how management and antibiotic exposure shape the cattle resistome, supporting more targeted interventions.</p></article>
+            <article class="impact-item"><h3>One Health policy</h3><p>Provide evidence for livestock management, urban planning, and future longitudinal studies across regions.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell closing"><p class="eyebrow">The central aim</p><h2>To find the microbial fingerprints of human proximity—and understand what they activate in the animal.</h2><p>This proposal builds a comparative baseline for studying cattle that live with people in very different ways, linking dietary exposure to microbial function and host response.</p></section>
+    </main>
+    <footer class="shell"><span>Humanization of the Cattle Gut Microbiome</span><span>Comparing domestic and stray cattle through a One Health lens</span></footer>
+  </body>
+</html>
