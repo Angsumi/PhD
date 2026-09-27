@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#09131d" />
-    <meta name="description" content="An integrative PhD proposal connecting dietary plant exposure, cattle gut metagenomics, microbial activity, host RNA-seq, antimicrobial resistance, and One Health risk." />
-    <title>Humanization of the Cattle Gut Microbiome · Integrative Multi-Omics</title>
+    <meta name="description" content="PhD Research Proposal: Humanisation of the Cattle Gut Microbiome — A comparative metagenomics study of domestic vs. urban stray cattle across Assam, exploring diet, microbial shifts, resistome, and One Health risk." />
+    <title>Humanisation Of Cattle Gut Microbiome · One Health Proposal</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <style>
       :root {
@@ -32,11 +32,11 @@
       nav a:hover, nav a:focus-visible { color: var(--mint); }
       .hero { padding: 92px 0 82px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 72px; align-items: end; }
       .eyebrow { color: var(--mint); text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 22px; }
-      h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 84px); line-height: .98; letter-spacing: -.065em; font-weight: 700; }
-      .hero-copy { color: var(--soft); max-width: 590px; font-size: 19px; margin: 28px 0 0; }
+      h1 { max-width: 780px; margin: 0; font-size: clamp(40px, 6.5vw, 80px); line-height: 1.02; letter-spacing: -.06em; font-weight: 700; }
+      .hero-copy { color: var(--soft); max-width: 600px; font-size: 19px; margin: 28px 0 0; }
       .hero-side { border-left: 1px solid var(--line); padding: 16px 0 8px 28px; }
-      .hero-side strong { display: block; font-size: 62px; line-height: 1; color: var(--coral); letter-spacing: -.06em; }
-      .hero-side span { display: block; color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 220px; }
+      .hero-side strong { display: block; font-size: 54px; line-height: 1; color: var(--coral); letter-spacing: -.05em; }
+      .hero-side span { display: block; color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 240px; }
       .section { padding: 92px 0; border-top: 1px solid var(--line); }
       .section-head { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 42px; }
       h2 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; letter-spacing: -.045em; }
@@ -53,29 +53,33 @@
       .facts li { padding-top: 12px; border-top: 1px solid var(--line); }
       .bridge { margin-top: 18px; padding: 26px 30px; border: 1px solid rgba(255,155,122,.45); background: linear-gradient(90deg, rgba(255,155,122,.14), rgba(165,243,208,.08)); display: flex; justify-content: space-between; gap: 24px; align-items: center; }
       .bridge strong { font-size: 19px; }
-      .bridge span { color: var(--soft); font-size: 14px; max-width: 510px; }
+      .bridge span { color: var(--soft); font-size: 14px; max-width: 530px; }
+      .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
       .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-      .card { padding: 28px; border: 1px solid var(--line); min-height: 190px; background: var(--ink-2); }
+      .card { padding: 28px; border: 1px solid var(--line); min-height: 200px; background: var(--ink-2); display: flex; flex-direction: column; justify-content: space-between; }
       .number { color: var(--coral); font-size: 14px; font-weight: 800; letter-spacing: .1em; }
-      .card h3 { margin: 30px 0 10px; font-size: 21px; line-height: 1.1; }
+      .card h3 { margin: 18px 0 10px; font-size: 21px; line-height: 1.15; }
       .card p { color: var(--muted); margin: 0; font-size: 15px; }
-      .method { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
+      .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 24px; }
+      .signal-item { padding: 18px 20px; border: 1px solid var(--line); background: var(--ink-2); border-left: 3px solid var(--mint); }
+      .signal-item h4 { margin: 0 0 6px; font-size: 16px; color: var(--soft); }
+      .signal-item p { margin: 0; font-size: 14px; color: var(--muted); }
+      .method { display: grid; grid-template-columns: .75fr 1.25fr; gap: 80px; align-items: start; }
       .method-intro p { color: var(--muted); max-width: 350px; }
       .steps { border-top: 1px solid var(--line); }
-      .step { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+      .step { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
       .step-index { color: var(--mint); font-size: 14px; font-weight: 800; }
-      .step h3 { margin: 0 0 5px; font-size: 19px; }
-      .step p { margin: 0; color: var(--muted); font-size: 15px; }
+      .step h3 { margin: 0 0 8px; font-size: 20px; }
+      .step p { margin: 0 0 10px; color: var(--muted); font-size: 15px; }
+      .step-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+      .step-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 4px; background: rgba(165,243,208,.1); color: var(--mint); border: 1px solid rgba(165,243,208,.2); }
+      .step-tag.coral { background: rgba(255,155,122,.1); color: var(--coral); border-color: rgba(255,155,122,.2); }
       .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
       .evidence-card { padding: 26px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(165,243,208,.09), rgba(16,36,52,.75)); }
       .evidence-card .number { color: var(--mint); }
       .evidence-card h3 { margin: 20px 0 9px; font-size: 20px; line-height: 1.1; }
       .evidence-card p { margin: 0; color: var(--muted); font-size: 15px; }
       .evidence-card strong { color: var(--soft); font-weight: 700; }
-      .proof { margin-top: 42px; border-top: 1px solid var(--line); }
-      .proof-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-      .proof-row span { color: var(--mint); font-size: 14px; font-weight: 750; }
-      .proof-row p { margin: 0; color: var(--soft); font-size: 15px; }
       .impact { background: var(--mint); color: var(--ink); border-top: 0; }
       .impact .section-head { align-items: start; }
       .impact .section-intro { color: #315548; }
@@ -85,10 +89,10 @@
       .impact-item h3 { font-size: 21px; margin: 0 0 10px; }
       .impact-item p { margin: 0; color: #315548; font-size: 15px; }
       .closing { padding: 100px 0 112px; text-align: center; }
-      .closing h2 { max-width: 820px; margin: 0 auto 26px; }
-      .closing p { max-width: 610px; margin: auto; color: var(--muted); }
+      .closing h2 { max-width: 860px; margin: 0 auto 26px; }
+      .closing p { max-width: 640px; margin: auto; color: var(--muted); }
       footer { border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
-      @media (max-width: 760px) {
+      @media (max-width: 860px) {
         .shell { width: min(var(--max), calc(100% - 34px)); }
         nav { display: none; }
         .hero { padding: 64px 0; grid-template-columns: 1fr; gap: 42px; }
@@ -99,9 +103,8 @@
         .profile { min-height: auto; padding: 28px; }
         .bridge { display: block; }
         .bridge span { display: block; margin-top: 10px; }
-        .grid-3, .evidence-grid, .impact-grid { grid-template-columns: 1fr; }
+        .grid-4, .grid-3, .evidence-grid, .impact-grid { grid-template-columns: 1fr; }
         .card { min-height: auto; }
-        .proof-row { grid-template-columns: 1fr; gap: 8px; }
         .impact-item { border-right: 0; border-bottom: 1px solid rgba(9,19,29,.2); margin: 0; padding: 26px 0; }
         .impact-item:last-child { border-bottom: 0; }
         footer { display: block; }
@@ -112,92 +115,316 @@
   <body>
     <header class="shell topbar">
       <a class="mark" href="#top" aria-label="Research proposal home"><span class="mark-icon">◌</span><span>ONE HEALTH / CATTLE MICROBIOME</span></a>
-      <nav aria-label="Primary navigation"><a href="#question">The question</a><a href="#study">The study</a><a href="#methodology">Methodology</a><a href="#impact">Why it matters</a><a href="./timeline.html">Timeline</a></nav>
+      <nav aria-label="Primary navigation"><a href="#question">The question</a><a href="#signal">The signal</a><a href="#framework">4 datasets</a><a href="#pipeline">Methodology</a><a href="#impact">Impact</a><a href="./timeline.html">Timeline</a></nav>
     </header>
 
     <main id="top">
       <section class="shell hero">
         <div>
           <p class="eyebrow">PhD research proposal · comparative metagenomics</p>
-          <h1>What happens to a cattle microbiome in a human world?</h1>
-          <p class="hero-copy">An integrative multi-omics study of domestic and stray cattle to understand how human contact, shared environments, diet, and veterinary care shape gut microbes, microbial activity, host response, and public-health risk.</p>
+          <h1>Humanisation of the Cattle Gut Microbiome</h1>
+          <p class="hero-copy">What happens to a cattle microbiome in a human world? A comparative metagenomics study of domestic vs. urban stray cattle across Assam to uncover humanisation signatures, dietary impacts, antimicrobial resistance, and One Health implications.</p>
         </div>
-        <div class="hero-side"><strong>200</strong><span>cattle across domestic and stray populations, sampled across three climatic regions</span></div>
+        <div class="hero-side">
+          <strong>2 Districts</strong>
+          <span>Assam field sampling: matched breed & gender across village domestic and urban stray populations for climatic & genetic uniformity</span>
+        </div>
       </section>
 
+      <!-- ── Two ways of living ── -->
       <section class="section" id="question">
         <div class="shell">
-          <div class="section-head"><h2>Two ways of living<br />beside us.</h2><p class="section-intro">The study uses cattle as a living model for a bigger One Health question: how do human environments alter animal microbiomes, and what might that mean for people?</p></div>
+          <div class="section-head">
+            <h2>Two ways of living<br />besides humans.</h2>
+            <p class="section-intro">Two distinct populations living in close proximity to humans provide two answers to the same question: how does human proximity shape the animal gut microbiome?</p>
+          </div>
           <div class="comparison">
-            <article class="profile"><span class="tag">Domestic cattle</span><h3>Managed proximity</h3><p>Raised in farming systems with regular human contact, controlled diets, veterinary care, and possible antibiotic exposure.</p><ul class="facts"><li>Close, repeated contact with people</li><li>Structured feed and housing</li><li>Routine veterinary intervention</li></ul></article>
-            <article class="profile stray"><span class="tag">Stray cattle</span><h3>Unmanaged proximity</h3><p>Living freely in human settlements, exposed to urban environments and often relying on scavenged food and waste.</p><ul class="facts"><li>Shared streets and public spaces</li><li>Variable food and environmental exposure</li><li>Minimal or irregular veterinary care</li></ul></article>
+            <article class="profile">
+              <span class="tag">Domestic cattle</span>
+              <h3>Managed proximity</h3>
+              <p>Maintained under thousands of years of cultural management in structured farming systems with stable routines.</p>
+              <ul class="facts">
+                <li>Thousand years of cultural management</li>
+                <li>Controlled, structured diet</li>
+                <li>Very low antibiotic exposure</li>
+                <li>Sheltered, managed living environment</li>
+              </ul>
+            </article>
+            <article class="profile stray">
+              <span class="tag">Urban stray cattle</span>
+              <h3>Unmanaged proximity</h3>
+              <p>Free-roaming animals thriving in human settlements, navigating street environments and municipal waste streams.</p>
+              <ul class="facts">
+                <li>Shared streets and public spaces</li>
+                <li>Variable food and environmental exposure</li>
+                <li>Rely on scavenged food and waste</li>
+                <li>High potential antibiotic exposure</li>
+              </ul>
+            </article>
           </div>
-          <div class="bridge"><strong>Between them is the signal.</strong><span>By comparing both populations, the study looks for a measurable “humanization” signature—microbial communities that reflect human-associated environments.</span></div>
+          <div class="bridge">
+            <strong>Between two groups, there is a signal.</strong>
+            <span>A measurable “Humanisation Signature” revealing how human-associated diets, waste, and environments reshape gut microbiota and drive resistome expansion.</span>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="study">
+      <!-- ── The Signal / Key Dimensions ── -->
+      <section class="section" id="signal">
         <div class="shell">
-          <div class="section-head"><h2>One question.<br />Six linked datasets.</h2><p class="section-intro">The proposal remains centred on microbiome humanization, while adding the measurements needed to follow the story from exposure to function and host response.</p></div>
-          <div class="grid-3">
-            <article class="card"><span class="number">01 / MICROBIOME</span><h3>Who is there?</h3><p>Map bacterial, archaeal, viral, and eukaryotic communities through whole-genome shotgun metagenomics.</p></article>
-            <article class="card"><span class="number">02 / MICROBIAL ACTIVITY</span><h3>What are they doing?</h3><p>Use microbial metatranscriptomics in a smaller subset to compare active pathways with the genes that are merely present.</p></article>
-            <article class="card"><span class="number">03 / HOST RESPONSE</span><h3>How does the host respond?</h3><p>Use blood or PBMC RNA-seq to profile immune, inflammatory, metabolic, and epithelial-barrier-related expression.</p></article>
-            <article class="card"><span class="number">04 / DIETARY PLANTS</span><h3>What entered the system?</h3><p>Use fecal plant DNA metabarcoding to track supplied fodder, grasses, weeds, crop residues, and food-associated plant material.</p></article>
-            <article class="card"><span class="number">05 / RESISTOME</span><h3>What can they resist?</h3><p>Screen metagenomic reads against CARD, ResFinder, and MEGARes to compare resistance genes and their mobility.</p></article>
-            <article class="card"><span class="number">06 / PARASITES</span><h3>What else is present?</h3><p>Combine microscopy and molecular confirmation to measure macroparasite diversity and potential zoonotic risk.</p></article>
+          <div class="section-head">
+            <h2>Between the two groups,<br />there is a signal.</h2>
+            <p class="section-intro">Capturing the measurable humanisation signature across multiple microbiological, functional, and ecological dimensions.</p>
           </div>
-          <div class="bridge" style="margin-top: 18px;"><strong>Plant / diet exposure → gut microbiome → microbial gene activity → host gene expression</strong><span>This is the added layer of the same PhD story: not a separate plant-science project, but a way to explain why the microbiome differs and what those differences do.</span></div>
+          <div class="signal-grid">
+            <div class="signal-item">
+              <h4>Measurable Humanisation Signature</h4>
+              <p>Quantify distinct shifts in gut microbial diversity, community structure, and functional profiles driven by anthropogenic contact.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Microbial Differences</h4>
+              <p>Identify differential abundance of bacterial and archaeal taxa down to order and genus levels between populations.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Human-Associated Environments</h4>
+              <p>Understand the precise ecological influence of urban waste, street habitats, and municipal runoff on animal gut ecosystems.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Host-Microbiome Interactions</h4>
+              <p>Explore how altered microbial communities impact host metabolism, epithelial barrier integrity, and overall resilience.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Antimicrobial Resistance (AMR)</h4>
+              <p>Detect antimicrobial resistance genes (ARGs) and track resistome penetration from urban environments into livestock.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Zoonotic Risk Assessment</h4>
+              <p>Assess potential pathogenic and zoonotic microbial reservoirs circulating in free-roaming urban cattle populations.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Microbial Biomarkers</h4>
+              <p>Identify specific microbial and functional biomarkers indicative of anthropogenic stress, dietary shifts, and disease states.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Environmental Adaptation</h4>
+              <p>Elucidate how the gut microbiome flexibly adapts to scavenging diets vs. controlled agro-pastoral feeding regimes.</p>
+            </div>
+            <div class="signal-item">
+              <h4>Livestock Health & One Health</h4>
+              <p>Generate actionable evidence to support targeted livestock interventions and integrated One Health biosurveillance.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
+      <!-- ── 4 Linked Datasets ── -->
+      <section class="section" id="framework">
+        <div class="shell">
+          <div class="section-head">
+            <h2>One question.<br />4 linked datasets.</h2>
+            <p class="section-intro">An integrated multi-dimensional framework connecting host populations, microbial taxonomy, dietary transitions, and resistome dynamics.</p>
+          </div>
+          <div class="grid-4">
+            <article class="card">
+              <div>
+                <span class="number">01 / WHO</span>
+                <h3>2 Cattle Populations</h3>
+                <p>Domestic farm cattle vs. urban stray cattle sampled across Assam districts, matched by breed and gender to eliminate genetic confounders.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div>
+                <span class="number">02 / WHAT</span>
+                <h3>Who is there? Microbes</h3>
+                <p>High-resolution taxonomic mapping of the gut microbiome classified down to order and genus level via whole-genome metagenomics.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div>
+                <span class="number">03 / HOW</span>
+                <h3>How diet impacts them?</h3>
+                <p>Tracing dietary transitions—from controlled fodder to scavenged waste—and how feed type reshapes microbial composition and function.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div>
+                <span class="number">04 / WHY</span>
+                <h3>Why matter for One Health?</h3>
+                <p>Uncovering the resistome, antibiotic resistance gene (ARG) penetration, and zoonotic exchange bridging animal, human, and environmental health.</p>
+              </div>
+            </article>
+          </div>
+          <div class="bridge" style="margin-top: 24px;">
+            <strong>Who (Populations) → What (Microbiota) → How (Dietary Impact) → Why (One Health & Resistome)</strong>
+            <span>A cohesive conceptual loop translating raw sequencing data into systemic One Health insights.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Step-by-Step Research Pathway ── -->
+      <section class="section" id="pipeline">
         <div class="shell method">
-          <div class="method-intro"><p class="eyebrow">Research pathway</p><h2>From field sample to usable evidence.</h2><p>The workflow is designed to move from careful collection to analysis that can support health surveillance, livestock management, and policy.</p></div>
+          <div class="method-intro">
+            <p class="eyebrow">Methodological workflow</p>
+            <h2>8-step research pipeline.</h2>
+            <p>From rigorous field design in Assam to high-throughput metagenomics, Gene Ontology annotation, KEGG pathway networks, and One Health impact.</p>
+          </div>
           <div class="steps">
-            <div class="step"><span class="step-index">01</span><div><h3>Collect</h3><p>Fresh fecal samples from 100 domestic and 100 stray cattle, with urban and rural contexts represented.</p></div></div>
-            <div class="step"><span class="step-index">02</span><div><h3>Sequence</h3><p>Extract high-quality DNA and use paired-end whole-genome shotgun sequencing for broad community coverage.</p></div></div>
-            <div class="step"><span class="step-index">03</span><div><h3>Profile function and exposure</h3><p>Measure diversity, taxonomic composition, dietary plant signatures, functional pathways, resistance genes, and parasite load between groups.</p></div></div>
-            <div class="step"><span class="step-index">04</span><div><h3>Read the host response</h3><p>Use a smaller matched subset—about 15–20 cattle per group—for microbial metatranscriptomics and host blood or PBMC RNA-seq.</p></div></div>
-            <div class="step"><span class="step-index">05</span><div><h3>Model the chain</h3><p>Use multivariate statistics and machine learning to connect plant exposure, microbiome composition, microbial activity, host response, and zoonotic risk.</p></div></div>
+            <!-- Step 1 -->
+            <div class="step">
+              <span class="step-index">01</span>
+              <div>
+                <h3>Faecal Matter Collection & Field Design</h3>
+                <p>Strategic geographic sampling across <strong>two districts in Assam</strong>: 2 village samples and 2 urban cattle from district headquarters per district. Village and city proximity ensures relatedness and identical climatic conditions. Exact same breed and gender selected for uniformity to eliminate breed-related microbiota fluctuations. Fresh faecal collection prevents DNA decay and air contamination.</p>
+                <div class="step-tags">
+                  <span class="step-tag">2 Districts in Assam</span>
+                  <span class="step-tag">Village vs Urban HQ</span>
+                  <span class="step-tag">Matched Breed & Gender</span>
+                  <span class="step-tag coral">Fresh Faecal Sampling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+              <span class="step-index">02</span>
+              <div>
+                <h3>Metagenomic Sequencing</h3>
+                <p>High-throughput shotgun metagenomics sequencing to capture total community DNA. Comprehensive data quality verification upon receipt—accepting datasets that pass stringent depth and error thresholds, or initiating reruns for suboptimal libraries.</p>
+                <div class="step-tags">
+                  <span class="step-tag">Shotgun Metagenomics</span>
+                  <span class="step-tag">Quality Verification</span>
+                  <span class="step-tag coral">Strict Rerun Protocol</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+              <span class="step-index">03</span>
+              <div>
+                <h3>Bioinformatics Pipeline</h3>
+                <p>End-to-end metagenomic processing: raw sequencing data merged with comprehensive metadata, rigorous quality control (QC), adapter/tag removal, taxonomic classification down to order and genus level using QIIME 2, and publication-ready Python visualisations.</p>
+                <div class="step-tags">
+                  <span class="step-tag">Raw & Metadata QC</span>
+                  <span class="step-tag">Tag Removal</span>
+                  <span class="step-tag">QIIME 2 (Order & Genus)</span>
+                  <span class="step-tag">Python Visualisation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+              <span class="step-index">04</span>
+              <div>
+                <h3>Functional Annotation (GO Analysis)</h3>
+                <p>Categorise identified microbial genes into clear functional groups using Gene Ontology (GO) analysis. Align assembled sequences against standard internet-accessible Gene Ontology databases to map biological processes, molecular functions, and cellular components.</p>
+                <div class="step-tags">
+                  <span class="step-tag">Gene Ontology (GO)</span>
+                  <span class="step-tag">Functional Grouping</span>
+                  <span class="step-tag">Database Alignment</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step">
+              <span class="step-index">05</span>
+              <div>
+                <h3>Pathway & Network Analysis (KEGG)</h3>
+                <p>Kyoto Encyclopedia of Genes and Genomes (KEGG) analysis to uncover the exact metabolic pathways that specific microbiota groups participate in. Perform network analysis mapping interactions between functional groups and discovered pathways to reveal metabolic rewiring.</p>
+                <div class="step-tags">
+                  <span class="step-tag">KEGG Metabolic Pathways</span>
+                  <span class="step-tag">Microbial Functional Mapping</span>
+                  <span class="step-tag coral">Pathway Network Analysis</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step">
+              <span class="step-index">06</span>
+              <div>
+                <h3>Statistical Data Analysis & Biological Interpretation</h3>
+                <p>Directly compare domestic vs. urban stray populations using multivariate statistical tests. Translate omics findings to identify key microbial shifts, evaluate diet-microbiome links, interpret active functions, assess zoonotic risks, examine antimicrobial resistance patterns, and identify predictive biomarkers.</p>
+                <div class="step-tags">
+                  <span class="step-tag">Comparative Statistics</span>
+                  <span class="step-tag">Omics Translation</span>
+                  <span class="step-tag">Zoonotic Risk</span>
+                  <span class="step-tag coral">AMR Pattern Assessment</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step">
+              <span class="step-index">07</span>
+              <div>
+                <h3>Research Outcomes</h3>
+                <p>Deliver an integrated body of evidence on Animal, Human, and Environmental interactions. Establish a baseline One Health perspective on stray cattle ecology and provide a definitive assessment of antibiotic resistance gene (ARG) penetration in urban ecosystems.</p>
+                <div class="step-tags">
+                  <span class="step-tag">Animal-Human-Environment Synthesis</span>
+                  <span class="step-tag">Stray Cattle Profile</span>
+                  <span class="step-tag">ARG Penetration Baseline</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step">
+              <span class="step-index">08</span>
+              <div>
+                <h3>Translational Impact</h3>
+                <p>Drive improved livestock health management, enable early identification of microbial health indicators, fortify antimicrobial resistance surveillance, inform environmental and public health monitoring, guide microbiome-based interventions, and serve as a gateway for future One Health research.</p>
+                <div class="step-tags">
+                  <span class="step-tag">Livestock Management</span>
+                  <span class="step-tag">Health Indicators</span>
+                  <span class="step-tag">AMR Surveillance</span>
+                  <span class="step-tag coral">One Health Gateway</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="methodology">
-        <div class="shell">
-          <div class="section-head"><h2>How samples<br />become evidence.</h2><p class="section-intro">Each method answers a different part of the same question. The result is supported when independent measurements point to the same pattern.</p></div>
-          <div class="evidence-grid">
-            <article class="evidence-card"><span class="number">01 / FIELD DESIGN</span><h3>Collect comparable samples</h3><p>Sample <strong>100 domestic and 100 stray cattle</strong> across urban and rural settings, recording management, antibiotic exposure, human contact, location, and visible health information.</p></article>
-            <article class="evidence-card"><span class="number">02 / METAGENOMICS</span><h3>Measure what is present</h3><p>Extract DNA from feces and use shotgun sequencing. Quality-filter reads, remove bovine DNA, then classify organisms and annotate genes and pathways.</p></article>
-            <article class="evidence-card"><span class="number">03 / METATRANSCRIPTOMICS</span><h3>Measure what is active</h3><p>In a smaller matched subset, sequence microbial RNA to test whether pathways such as carbohydrate breakdown, SCFA production, methane metabolism, stress response, or AMR are being expressed.</p></article>
-            <article class="evidence-card"><span class="number">04 / HOST RNA-SEQ</span><h3>Measure the animal response</h3><p>Use blood or PBMC RNA-seq from about <strong>15–20 cattle per group</strong> to compare immune, inflammatory, metabolic, and epithelial-barrier gene expression.</p></article>
-            <article class="evidence-card"><span class="number">05 / PLANT DNA</span><h3>Measure dietary exposure</h3><p>Use chloroplast markers such as <strong>trnL, rbcL, or matK</strong> to identify fodder, grasses, weeds, crop residues, and human food-associated plants in fecal samples.</p></article>
-            <article class="evidence-card"><span class="number">06 / PARASITES + AMR</span><h3>Measure co-risk</h3><p>Combine microscopy, parasite PCR, and resistome screening against CARD, ResFinder, and MEGARes to map parasite burden and resistance-gene profiles.</p></article>
-          </div>
-          <div class="proof">
-            <div class="proof-row"><span>CLAIM</span><span>COMPARISON</span><span>SUPPORTING EVIDENCE</span></div>
-            <div class="proof-row"><p>Human proximity changes the microbiome.</p><p>Domestic vs. stray cattle; urban vs. rural context.</p><p>Taxa, alpha/beta diversity, functional pathways, and plant exposure signatures differ consistently.</p></div>
-            <div class="proof-row"><p>The difference is biologically active.</p><p>Metagenome vs. metatranscriptome in the matched subset.</p><p>Genes predicted to be present are also expressed, with activity linked to host or environmental metadata.</p></div>
-            <div class="proof-row"><p>The host responds to the microbial shift.</p><p>Microbiome activity vs. host RNA-seq expression.</p><p>Immune, inflammatory, metabolic, or barrier-related gene modules correlate after controlling for key confounders.</p></div>
-            <div class="proof-row"><p>Diet helps explain the pathway.</p><p>Plant profile → microbiome → activity → host response.</p><p>Plant diversity and composition predict microbial and host signatures in a reproducible multivariate model.</p></div>
-          </div>
-        </div>
-      </section>
-
+      <!-- ── Impact Section ── -->
       <section class="section impact" id="impact">
         <div class="shell">
-          <div class="section-head"><h2>Why this matters<br />outside the lab.</h2><p class="section-intro">The goal is not only to describe microbial difference, but to make the relationship between animal health, human health, and environment easier to act on.</p></div>
+          <div class="section-head">
+            <h2>Why this matters<br />for One Health.</h2>
+            <p class="section-intro">Bridging livestock management, urban ecology, and public health policy through rigorous metagenomic evidence.</p>
+          </div>
           <div class="impact-grid">
-            <article class="impact-item"><h3>Public health</h3><p>Identify microbial and genetic markers that can sharpen zoonotic disease and antimicrobial resistance surveillance.</p></article>
-            <article class="impact-item"><h3>Better stewardship</h3><p>Show how management and antibiotic exposure shape the cattle resistome, supporting more targeted interventions.</p></article>
-            <article class="impact-item"><h3>One Health policy</h3><p>Provide evidence for livestock management, urban planning, and future longitudinal studies across regions.</p></article>
+            <article class="impact-item">
+              <h3>Livestock Management</h3>
+              <p>Support improved herd health, early detection of microbial dysbiosis, and the development of targeted, diet-informed interventions.</p>
+            </article>
+            <article class="impact-item">
+              <h3>AMR Biosurveillance</h3>
+              <p>Map the penetration of antimicrobial resistance genes across municipal environments, establishing critical surveillance benchmarks.</p>
+            </article>
+            <article class="impact-item">
+              <h3>Public Health & Policy</h3>
+              <p>Inform municipal urban planning, zoonotic risk mitigation, and provide a repeatable framework for future One Health studies across regions.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="shell closing"><p class="eyebrow">The central aim</p><h2>To find the microbial fingerprints of human proximity—and understand what they activate in the animal.</h2><p>This proposal builds a comparative baseline for studying cattle that live with people in very different ways, linking dietary exposure to microbial function and host response.</p></section>
+      <!-- ── Closing ── -->
+      <section class="shell closing">
+        <p class="eyebrow">The central aim</p>
+        <h2>Uncovering the microbial fingerprints of human proximity in cattle.</h2>
+        <p>Providing evidence-based insights into how urban living, diet, and anthropogenic environments alter the bovine microbiome—advancing animal health, human safety, and environmental stewardship.</p>
+      </section>
     </main>
-    <footer class="shell"><span>Angsuman Das</span><span>Dr. Kaushalendra</span><span>Dr. Awadhesh Kumar</span></footer>
+
+    <footer class="shell">
+      <span>Angsuman Das</span>
+      <span>Dr. Kaushalendra</span>
+      <span>Dr. Awadhesh Kumar</span>
+    </footer>
   </body>
 </html>

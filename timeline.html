@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#09131d" />
-    <meta name="description" content="PhD research timeline — from literature review to thesis defence, covering all phases of the cattle gut microbiome One Health study." />
-    <title>Research Timeline · Cattle Microbiome One Health</title>
+    <meta name="description" content="PhD Research Timeline — A structured 3-year plan for the Humanisation of the Cattle Gut Microbiome proposal across Assam, covering field sampling, metagenomics, QIIME 2, GO/KEGG pathway networks, and One Health translation." />
+    <title>Research Timeline · Humanisation Of Cattle Gut Microbiome</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <style>
       :root {
@@ -37,8 +37,8 @@
       /* ── Hero ── */
       .hero { padding: 92px 0 82px; }
       .eyebrow { color: var(--mint); text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 22px; }
-      h1 { max-width: 760px; margin: 0; font-size: clamp(44px, 7vw, 72px); line-height: .98; letter-spacing: -.065em; font-weight: 700; }
-      .hero-copy { color: var(--soft); max-width: 620px; font-size: 19px; margin: 28px 0 0; }
+      h1 { max-width: 780px; margin: 0; font-size: clamp(40px, 6.5vw, 72px); line-height: 1.02; letter-spacing: -.06em; font-weight: 700; }
+      .hero-copy { color: var(--soft); max-width: 640px; font-size: 19px; margin: 28px 0 0; }
       h2 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; letter-spacing: -.045em; }
 
       /* ── Duration bar ── */
@@ -79,11 +79,11 @@
       }
       .phase.coral::before { border-color: var(--coral); }
 
-      .phase-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+      .phase-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; }
       .phase-label { color: var(--coral); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; white-space: nowrap; }
       .phase h3 { margin: 0; font-size: 24px; letter-spacing: -.03em; }
       .phase-months { color: var(--mint); font-size: 13px; font-weight: 700; margin-left: auto; white-space: nowrap; }
-      .phase-desc { color: var(--muted); font-size: 15px; margin: 6px 0 0; max-width: 680px; }
+      .phase-desc { color: var(--muted); font-size: 15px; margin: 6px 0 0; max-width: 720px; }
 
       .tasks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
       .task { padding: 18px 22px; border: 1px solid var(--line); background: var(--ink-2); }
@@ -95,16 +95,16 @@
       .gantt { margin-top: 42px; }
 
       /* month headers */
-      .gantt-header { display: grid; grid-template-columns: 200px repeat(36, 1fr); gap: 0; margin-bottom: 8px; }
+      .gantt-header { display: grid; grid-template-columns: 220px repeat(36, 1fr); gap: 0; margin-bottom: 8px; }
       .gantt-header span { font-size: 11px; color: var(--muted); text-align: center; font-weight: 700; letter-spacing: .05em; }
       .gantt-header span:first-child { text-align: left; color: var(--soft); font-size: 12px; }
 
       /* year markers */
-      .year-row { display: grid; grid-template-columns: 200px repeat(36, 1fr); gap: 0; margin-bottom: 4px; }
+      .year-row { display: grid; grid-template-columns: 220px repeat(36, 1fr); gap: 0; margin-bottom: 4px; }
       .year-row span:first-child { font-size: 12px; color: transparent; }
       .year-marker { text-align: center; font-size: 12px; font-weight: 800; color: var(--mint); letter-spacing: .06em; }
 
-      .gantt-row { display: grid; grid-template-columns: 200px repeat(36, 1fr); gap: 0; align-items: center; min-height: 36px; border-bottom: 1px solid var(--line); }
+      .gantt-row { display: grid; grid-template-columns: 220px repeat(36, 1fr); gap: 0; align-items: center; min-height: 36px; border-bottom: 1px solid var(--line); }
       .gantt-row:first-child { border-top: 1px solid var(--line); }
       .gantt-label { font-size: 13px; font-weight: 600; color: var(--soft); padding-right: 12px; }
       .gantt-bar { height: 22px; border-radius: 4px; min-width: 0; }
@@ -123,7 +123,7 @@
       /* ── Footer ── */
       footer { border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
 
-      @media (max-width: 760px) {
+      @media (max-width: 860px) {
         .shell { width: min(var(--max), calc(100% - 34px)); }
         nav { display: none; }
         .hero { padding: 64px 0; }
@@ -137,7 +137,7 @@
         .phase-header { flex-wrap: wrap; }
         .phase-months { margin-left: 0; }
         .gantt { overflow-x: auto; }
-        .gantt-header, .gantt-row, .year-row { min-width: 900px; }
+        .gantt-header, .gantt-row, .year-row { min-width: 960px; }
         .milestones { grid-template-columns: 1fr; }
         footer { display: block; }
         footer span { display: block; margin-top: 8px; }
@@ -147,19 +147,19 @@
   <body>
     <header class="shell topbar">
       <a class="mark" href="./index.html" aria-label="Research proposal home"><span class="mark-icon">◌</span><span>ONE HEALTH / CATTLE MICROBIOME</span></a>
-      <nav aria-label="Primary navigation"><a href="./index.html#question">The question</a><a href="./index.html#study">The study</a><a href="./index.html#methodology">Methodology</a><a href="./index.html#impact">Why it matters</a><a href="./timeline.html" class="active">Timeline</a></nav>
+      <nav aria-label="Primary navigation"><a href="./index.html#question">The question</a><a href="./index.html#signal">The signal</a><a href="./index.html#framework">4 datasets</a><a href="./index.html#pipeline">Methodology</a><a href="./index.html#impact">Impact</a><a href="./timeline.html" class="active">Timeline</a></nav>
     </header>
 
     <main>
       <section class="shell hero">
-        <p class="eyebrow">PhD research timeline · 3-year plan</p>
-        <h1>From hypothesis to thesis defence.</h1>
-        <p class="hero-copy">A structured 36-month research timeline covering literature review, fieldwork, multi-omics laboratory work, bioinformatics, integration modelling, and thesis writing.</p>
+        <p class="eyebrow">PhD research timeline · 36-month plan</p>
+        <h1>From field sampling to One Health translation.</h1>
+        <p class="hero-copy">A structured 3-year timeline aligned with the finalized 8-step methodology—spanning Assam field sampling, metagenomics sequencing, QIIME 2 bioinformatics, GO/KEGG pathway networks, statistical omics translation, and thesis submission.</p>
 
         <div class="duration-bar">
-          <div class="dur-segment"><strong>Y1</strong><span>Foundation & fieldwork</span></div>
-          <div class="dur-segment"><strong>Y2</strong><span>Laboratory & sequencing</span></div>
-          <div class="dur-segment"><strong>Y3</strong><span>Analysis & thesis</span></div>
+          <div class="dur-segment"><strong>Year 1</strong><span>Study design, Assam sampling & sequencing</span></div>
+          <div class="dur-segment"><strong>Year 2</strong><span>Bioinformatics, GO annotation & KEGG networks</span></div>
+          <div class="dur-segment"><strong>Year 3</strong><span>Statistical comparison, One Health outcomes & thesis</span></div>
         </div>
       </section>
 
@@ -167,8 +167,8 @@
       <section class="section">
         <div class="shell">
           <div class="section-head">
-            <h2>Research phases<br />in detail.</h2>
-            <p class="section-intro">Each phase builds on the previous one. Overlapping activities ensure continuous progress without bottlenecks.</p>
+            <h2>PhD execution phases<br />in detail.</h2>
+            <p class="section-intro">Eight linked phases translating the finalized proposal into actionable milestones across 36 months.</p>
           </div>
 
           <div class="timeline">
@@ -177,111 +177,127 @@
             <div class="phase">
               <div class="phase-header">
                 <span class="phase-label">Phase 1</span>
-                <h3>Literature review & study design</h3>
-                <span class="phase-months">Months 1 – 6</span>
+                <h3>Literature review, hypothesis formulation & study design</h3>
+                <span class="phase-months">Months 1 – 4</span>
               </div>
-              <p class="phase-desc">Build the theoretical foundation. Survey existing research on cattle gut microbiomes, One Health frameworks, AMR in livestock, and plant-diet-microbiome interactions. Define hypotheses and finalise the sampling strategy.</p>
+              <p class="phase-desc">Build the theoretical framework for cattle microbiome humanisation. Comprehensive review of livestock gut metagenomics, urban environmental adaptations, resistome dynamics, and One Health surveillance frameworks.</p>
               <div class="tasks">
-                <div class="task"><h4>Systematic review</h4><p>Catalogue existing studies on cattle metagenomics, humanization signatures, and AMR transfer pathways.</p></div>
-                <div class="task"><h4>Study design</h4><p>Finalise sample size (200 cattle), site selection across 3 climatic regions, and metadata collection protocols.</p></div>
-                <div class="task"><h4>Ethics & permissions</h4><p>Obtain IAEC approval, MoU with partner farms, and permissions for stray cattle sampling in urban areas.</p></div>
-                <div class="task"><h4>Pilot sampling</h4><p>Test collection, storage, and DNA extraction protocols with a small batch to validate the workflow.</p></div>
+                <div class="task"><h4>Systematic literature review</h4><p>Catalogue current research on cattle gut microbiota, humanisation markers, and resistome penetration across urban ecosystems.</p></div>
+                <div class="task"><h4>Sampling protocol design</h4><p>Define criteria for selecting 2 districts in Assam, matching village and urban HQ sampling sites for climatic proximity.</p></div>
+                <div class="task"><h4>Ethics & institutional approvals</h4><p>Obtain necessary ethical clearances and permissions from local veterinary authorities and municipal councils.</p></div>
+                <div class="task"><h4>Pilot collection test</h4><p>Validate fresh faecal collection, cooling protocols, and transport chains to avoid DNA decay and airborne contamination.</p></div>
               </div>
             </div>
 
-            <!-- Phase 2 -->
+            <!-- Phase 2 (Step 1) -->
             <div class="phase coral">
               <div class="phase-header">
-                <span class="phase-label">Phase 2</span>
-                <h3>Field sampling & metadata collection</h3>
-                <span class="phase-months">Months 5 – 12</span>
+                <span class="phase-label">Phase 2 · Step 1</span>
+                <h3>Faecal matter collection across Assam</h3>
+                <span class="phase-months">Months 4 – 9</span>
               </div>
-              <p class="phase-desc">Collect fecal samples from 100 domestic and 100 stray cattle across urban and rural settings. Record management practices, antibiotic history, human contact level, GPS location, and health status for each animal. Collect blood/PBMC from a matched subset of 30–40 animals.</p>
+              <p class="phase-desc">Execute field sampling across two districts in Assam. In each district, sample 2 village domestic cattle and 2 urban stray cattle from district headquarters. Match exact breed and gender for genetic uniformity. Collect fresh faecal matter immediately to prevent DNA decay and external atmospheric contamination.</p>
               <div class="tasks">
-                <div class="task"><h4>Domestic cattle sampling</h4><p>100 animals from managed farms — fresh fecal samples, blood draws for the RNA-seq subset, and detailed husbandry records.</p></div>
-                <div class="task"><h4>Stray cattle sampling</h4><p>100 free-roaming animals from urban/peri-urban areas — fecal collection, observational health scoring, and environmental context notes.</p></div>
-                <div class="task"><h4>Metadata questionnaires</h4><p>Standardised forms for diet, antibiotic exposure, contact frequency, housing, and local environmental conditions.</p></div>
-                <div class="task"><h4>Sample processing & storage</h4><p>Aliquot, preserve in DNA/RNA stabilisers, and store at −80 °C within 4 hours of collection.</p></div>
+                <div class="task"><h4>District 1 & 2 field sampling</h4><p>Collect samples across matched village domestic and urban HQ stray cattle in both selected Assam districts.</p></div>
+                <div class="task"><h4>Breed & gender matching</h4><p>Screen and record exact breed and gender uniformity across all animals to eliminate breed-related microbiota fluctuations.</p></div>
+                <div class="task"><h4>Fresh collection & cold chain</h4><p>Collect fresh faecal matter directly, prevent air exposure, and transport under strict cold-chain preservation.</p></div>
+                <div class="task"><h4>Comprehensive metadata capture</h4><p>Record diet details (controlled fodder vs. scavenged waste), antibiotic history, housing, and urban habitat conditions.</p></div>
               </div>
             </div>
 
-            <!-- Phase 3 -->
+            <!-- Phase 3 (Step 2) -->
             <div class="phase">
               <div class="phase-header">
-                <span class="phase-label">Phase 3</span>
-                <h3>DNA/RNA extraction & sequencing</h3>
-                <span class="phase-months">Months 10 – 18</span>
+                <span class="phase-label">Phase 3 · Step 2</span>
+                <h3>High-throughput metagenomic sequencing & quality verification</h3>
+                <span class="phase-months">Months 8 – 13</span>
               </div>
-              <p class="phase-desc">Extract high-quality nucleic acids from all samples. Perform whole-genome shotgun metagenomics on all 200 fecal samples. For the matched subset, add microbial metatranscriptomics and host blood/PBMC RNA-seq. Run plant DNA metabarcoding using chloroplast markers (trnL, rbcL, matK).</p>
+              <p class="phase-desc">Dispatch prepared samples for whole-genome shotgun metagenomics sequencing. Implement a strict quality verification protocol upon raw data receipt—accepting high-depth libraries meeting error thresholds or issuing immediate reruns.</p>
               <div class="tasks">
-                <div class="task"><h4>Fecal DNA extraction</h4><p>High-quality DNA from 200 samples for shotgun metagenomics and plant metabarcoding.</p></div>
-                <div class="task"><h4>Shotgun metagenomics</h4><p>Paired-end whole-genome sequencing for broad community and functional coverage.</p></div>
-                <div class="task"><h4>Metatranscriptomics</h4><p>Microbial RNA-seq from ~30–40 matched samples to capture active gene expression.</p></div>
-                <div class="task"><h4>Host RNA-seq & plant metabarcoding</h4><p>Blood/PBMC RNA-seq (15–20 per group) and fecal plant DNA profiling via chloroplast markers.</p></div>
+                <div class="task"><h4>DNA extraction & library preparation</h4><p>Extract high-purity total community genomic DNA from all faecal samples under sterile laboratory conditions.</p></div>
+                <div class="task"><h4>Metagenomics sequencing dispatch</h4><p>Perform high-throughput shotgun sequencing to capture total microbial and resistome diversity.</p></div>
+                <div class="task"><h4>Quality threshold verification</h4><p>Inspect raw FastQ files for base quality scores, read depth, adapter content, and sequence completeness.</p></div>
+                <div class="task"><h4>Data acceptance / rerun protocol</h4><p>Accept verified datasets meeting quality benchmarks; trigger rerun requests for suboptimal sequencing batches.</p></div>
               </div>
             </div>
 
-            <!-- Phase 4 -->
+            <!-- Phase 4 (Step 3) -->
             <div class="phase coral">
               <div class="phase-header">
-                <span class="phase-label">Phase 4</span>
-                <h3>Parasitology & resistome screening</h3>
+                <span class="phase-label">Phase 4 · Step 3</span>
+                <h3>Bioinformatics pipeline & QIIME 2 classification</h3>
                 <span class="phase-months">Months 12 – 18</span>
               </div>
-              <p class="phase-desc">Examine fecal samples by microscopy and molecular confirmation for macroparasite diversity and zoonotic risk. Screen metagenomic reads against CARD, ResFinder, and MEGARes databases to map antimicrobial resistance gene profiles and assess mobility elements.</p>
+              <p class="phase-desc">Execute an end-to-end computational pipeline integrating raw sequencing reads with field metadata. Perform QC filtering, tag removal, taxonomic classification down to order and genus levels using QIIME 2, and generate Python visualisations.</p>
               <div class="tasks">
-                <div class="task"><h4>Fecal microscopy</h4><p>Identify helminth eggs, protozoan cysts, and other macroparasites using standard flotation and sedimentation techniques.</p></div>
-                <div class="task"><h4>Molecular parasite confirmation</h4><p>PCR-based confirmation of key zoonotic parasites detected microscopically.</p></div>
-                <div class="task"><h4>Resistome profiling</h4><p>Screen shotgun reads against CARD, ResFinder, and MEGARes for resistance gene abundance, diversity, and co-occurrence.</p></div>
-                <div class="task"><h4>Mobility element analysis</h4><p>Identify integrons, plasmid-associated ARGs, and insertion sequences linked to horizontal gene transfer.</p></div>
+                <div class="task"><h4>Raw data & metadata integration</h4><p>Merge raw FastQ reads with curated dietary, geographical, and clinical metadata into standardized analysis tables.</p></div>
+                <div class="task"><h4>Read QC & tag removal</h4><p>Filter low-quality reads, trim adapters and barcodes, and remove host (bovine) genomic contamination.</p></div>
+                <div class="task"><h4>QIIME 2 taxonomic classification</h4><p>Classify all bacterial and archaeal microbiota down to order and genus levels using curated reference databases.</p></div>
+                <div class="task"><h4>Python visualisations</h4><p>Generate publication-ready relative abundance charts, alpha/beta diversity plots, and taxonomic heatmaps using Python.</p></div>
               </div>
             </div>
 
-            <!-- Phase 5 -->
+            <!-- Phase 5 (Steps 4 & 5) -->
             <div class="phase">
               <div class="phase-header">
-                <span class="phase-label">Phase 5</span>
-                <h3>Bioinformatics & data analysis</h3>
-                <span class="phase-months">Months 16 – 28</span>
+                <span class="phase-label">Phase 5 · Steps 4 & 5</span>
+                <h3>Functional annotation (GO) & KEGG pathway network analysis</h3>
+                <span class="phase-months">Months 16 – 24</span>
               </div>
-              <p class="phase-desc">Process all sequencing data through quality filtering, host DNA removal, and taxonomic/functional annotation. Compare alpha and beta diversity, differential abundance, functional pathway enrichment, and dietary plant profiles between domestic and stray groups.</p>
+              <p class="phase-desc">Annotate assembled genes into functional groups using Gene Ontology (GO) analysis aligned with internet-accessible databases. Map metabolic pathways via KEGG to identify functions of specific microbiota groups, and perform network analysis around functional clusters.</p>
               <div class="tasks">
-                <div class="task"><h4>Quality control & preprocessing</h4><p>Adapter trimming, quality filtering, bovine DNA decontamination, and read-level QC across all datasets.</p></div>
-                <div class="task"><h4>Taxonomic & functional profiling</h4><p>Classify bacteria, archaea, viruses, and eukaryotes; annotate KEGG pathways, CAZymes, and virulence factors.</p></div>
-                <div class="task"><h4>Differential analysis</h4><p>Compare community composition, diversity metrics, and functional pathways between domestic vs. stray and urban vs. rural groups.</p></div>
-                <div class="task"><h4>Host transcriptome analysis</h4><p>Differential gene expression of immune, inflammatory, metabolic, and epithelial-barrier modules from blood/PBMC RNA-seq.</p></div>
+                <div class="task"><h4>Gene Ontology (GO) analysis</h4><p>Categorise identified microbial genes into biological processes, molecular functions, and cellular component groups.</p></div>
+                <div class="task"><h4>Database alignment</h4><p>Align assembled sequences against official GO databases to produce standardized functional annotations.</p></div>
+                <div class="task"><h4>KEGG metabolic pathway mapping</h4><p>Map Kyoto Encyclopedia of Genes and Genomes pathways involved in carbohydrate breakdown, SCFA production, and xenobiotic metabolism.</p></div>
+                <div class="task"><h4>Pathway network analysis</h4><p>Construct network graphs linking functional groups with discovered metabolic pathways to uncover ecological rewiring.</p></div>
               </div>
             </div>
 
-            <!-- Phase 6 -->
+            <!-- Phase 6 (Step 6) -->
             <div class="phase coral">
               <div class="phase-header">
-                <span class="phase-label">Phase 6</span>
-                <h3>Multi-omics integration & modelling</h3>
-                <span class="phase-months">Months 24 – 32</span>
+                <span class="phase-label">Phase 6 · Step 6</span>
+                <h3>Statistical data analysis & biological interpretation</h3>
+                <span class="phase-months">Months 22 – 28</span>
               </div>
-              <p class="phase-desc">Connect all six datasets into a unified model: plant/diet exposure → gut microbiome composition → microbial gene activity → host gene expression → AMR and zoonotic risk. Use multivariate statistics and machine learning to identify the "humanization signature".</p>
+              <p class="phase-desc">Directly compare domestic vs. urban stray cattle populations using robust statistical models. Translate omics findings to understand the diet-microbiome relationship, active microbial functions, host-microbiome interactions, zoonotic risks, and antimicrobial resistance patterns.</p>
               <div class="tasks">
-                <div class="task"><h4>Correlation networks</h4><p>Build co-occurrence networks linking plant diet profiles, microbial taxa, active pathways, and host gene modules.</p></div>
-                <div class="task"><h4>Machine learning models</h4><p>Train classifiers to predict domestic vs. stray origin from microbiome features; identify the strongest predictive signatures.</p></div>
-                <div class="task"><h4>Causal pathway modelling</h4><p>Use structural equation modelling or mediation analysis to test the diet → microbiome → host response chain.</p></div>
-                <div class="task"><h4>One Health risk scoring</h4><p>Combine resistome, parasite, and zoonotic microbe data into a composite risk framework for public health interpretation.</p></div>
+                <div class="task"><h4>Population statistical comparisons</h4><p>Perform multivariate differential abundance tests (DESeq2/ANCOM-BC) and PERMANOVA between domestic and stray cohorts.</p></div>
+                <div class="task"><h4>Diet-microbiome translation</h4><p>Correlate dietary types (controlled feed vs. scavenged refuse) with specific microbial taxa and functional shifts.</p></div>
+                <div class="task"><h4>Zoonotic risk & pathogen profiling</h4><p>Identify potential pathogenic species and opportunistic zoonotic microbes enriched in urban stray cattle.</p></div>
+                <div class="task"><h4>AMR patterns & biomarker identification</h4><p>Map antimicrobial resistance gene patterns and pinpoint candidate microbial biomarkers of anthropogenic exposure.</p></div>
               </div>
             </div>
 
-            <!-- Phase 7 -->
+            <!-- Phase 7 (Step 7) -->
             <div class="phase">
               <div class="phase-header">
-                <span class="phase-label">Phase 7</span>
-                <h3>Thesis writing & defence</h3>
-                <span class="phase-months">Months 28 – 36</span>
+                <span class="phase-label">Phase 7 · Step 7</span>
+                <h3>Outcome synthesis & One Health resistome assessment</h3>
+                <span class="phase-months">Months 26 – 32</span>
               </div>
-              <p class="phase-desc">Draft the thesis, prepare manuscripts for peer-reviewed publication, present findings at conferences, and submit for defence. Translate key findings into actionable recommendations for livestock management and One Health policy.</p>
+              <p class="phase-desc">Synthesise integrated evidence on Animal, Human, and Environmental interactions. Establish a baseline One Health profile for free-roaming stray cattle and deliver a quantitative assessment of current antibiotic resistance gene (ARG) penetration in urban ecosystems.</p>
               <div class="tasks">
-                <div class="task"><h4>Manuscript preparation</h4><p>Prepare 3–4 manuscripts covering metagenomics, multi-omics integration, resistome/parasitology, and the One Health framework.</p></div>
-                <div class="task"><h4>Thesis compilation</h4><p>Integrate all chapters — introduction, methods, results, discussion — into a unified thesis document.</p></div>
-                <div class="task"><h4>Conference presentations</h4><p>Present findings at national/international conferences on microbiome science, One Health, or veterinary public health.</p></div>
-                <div class="task"><h4>Defence & policy brief</h4><p>Defend the thesis and prepare a policy brief summarising actionable findings for livestock and public health stakeholders.</p></div>
+                <div class="task"><h4>Integrated Animal-Human-Environment model</h4><p>Synthesise multi-omics, metadata, and geospatial data into a unified model of environmental humanisation.</p></div>
+                <div class="task"><h4>Stray cattle One Health baseline</h4><p>Establish a comprehensive ecological baseline documenting the microbiome and pathogen carriage of urban stray cattle.</p></div>
+                <div class="task"><h4>ARG penetration quantification</h4><p>Quantify the abundance, diversity, and potential mobility of antibiotic resistance genes circulating in urban animals.</p></div>
+                <div class="task"><h4>Stakeholder & policy brief</h4><p>Draft executive summaries for veterinary departments, urban local bodies, and public health surveillance agencies.</p></div>
+              </div>
+            </div>
+
+            <!-- Phase 8 (Step 8) -->
+            <div class="phase coral">
+              <div class="phase-header">
+                <span class="phase-label">Phase 8 · Step 8</span>
+                <h3>Translational impact, publications & thesis defence</h3>
+                <span class="phase-months">Months 30 – 36</span>
+              </div>
+              <p class="phase-desc">Translate research findings into livestock management practices, publish peer-reviewed papers in high-impact journals, present at international conferences, complete the doctoral dissertation, and successfully defend the PhD thesis.</p>
+              <div class="tasks">
+                <div class="task"><h4>Peer-reviewed publications</h4><p>Submit 3–4 research manuscripts covering comparative metagenomics, GO/KEGG pathway networks, and One Health AMR dynamics.</p></div>
+                <div class="task"><h4>Livestock management guidelines</h4><p>Formulate recommendations for diet-based interventions and early microbial health indicators for cattle.</p></div>
+                <div class="task"><h4>Dissertation writing & compilation</h4><p>Compile comprehensive chapters into the finalized doctoral thesis following university guidelines.</p></div>
+                <div class="task"><h4>Thesis submission & defence</h4><p>Formal submission, expert evaluation, open seminar presentation, and final oral defence.</p></div>
               </div>
             </div>
 
@@ -293,8 +309,8 @@
       <section class="gantt-section">
         <div class="shell">
           <div class="section-head">
-            <h2>At a glance.</h2>
-            <p class="section-intro">A visual overview of how the seven phases overlap across the 36-month PhD programme.</p>
+            <h2>Gantt chart overview.</h2>
+            <p class="section-intro">Visual timeline illustrating how the 8 methodology steps and execution phases overlap across the 36-month PhD programme.</p>
           </div>
 
           <div class="gantt">
@@ -308,7 +324,7 @@
 
             <!-- Month headers -->
             <div class="gantt-header">
-              <span>Activity</span>
+              <span>Methodology Step</span>
               <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
               <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
               <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
@@ -317,58 +333,62 @@
               <span>31</span><span>32</span><span>33</span><span>34</span><span>35</span><span>36</span>
             </div>
 
-            <!-- Rows: grid-column starts at 2 (month 1) -->
+            <!-- Gantt Rows -->
             <div class="gantt-row">
-              <span class="gantt-label">Literature review</span>
-              <div class="gantt-bar bar-mint" style="grid-column: 2 / 8;"></div>
+              <span class="gantt-label">1. Literature & Study Design</span>
+              <div class="gantt-bar bar-mint" style="grid-column: 2 / 6;"></div>
             </div>
             <div class="gantt-row">
-              <span class="gantt-label">Field sampling</span>
-              <div class="gantt-bar bar-coral" style="grid-column: 6 / 14;"></div>
+              <span class="gantt-label">2. Assam Field Sampling</span>
+              <div class="gantt-bar bar-coral" style="grid-column: 5 / 11;"></div>
             </div>
             <div class="gantt-row">
-              <span class="gantt-label">DNA/RNA extraction</span>
-              <div class="gantt-bar bar-mint" style="grid-column: 11 / 20;"></div>
+              <span class="gantt-label">3. Metagenomics & QC</span>
+              <div class="gantt-bar bar-mint" style="grid-column: 9 / 15;"></div>
             </div>
             <div class="gantt-row">
-              <span class="gantt-label">Parasitology & AMR</span>
+              <span class="gantt-label">4. QIIME 2 & Python Pipeline</span>
               <div class="gantt-bar bar-coral" style="grid-column: 13 / 20;"></div>
             </div>
             <div class="gantt-row">
-              <span class="gantt-label">Bioinformatics</span>
-              <div class="gantt-bar bar-soft" style="grid-column: 17 / 30;"></div>
+              <span class="gantt-label">5. GO & KEGG Pathway Networks</span>
+              <div class="gantt-bar bar-soft" style="grid-column: 17 / 26;"></div>
             </div>
             <div class="gantt-row">
-              <span class="gantt-label">Multi-omics integration</span>
-              <div class="gantt-bar bar-mixed" style="grid-column: 25 / 34;"></div>
+              <span class="gantt-label">6. Statistical Analysis & Interpretation</span>
+              <div class="gantt-bar bar-mixed" style="grid-column: 23 / 30;"></div>
             </div>
             <div class="gantt-row">
-              <span class="gantt-label">Thesis & publications</span>
-              <div class="gantt-bar bar-mint" style="grid-column: 29 / 38;"></div>
+              <span class="gantt-label">7. Outcome Synthesis & ARG Baseline</span>
+              <div class="gantt-bar bar-coral" style="grid-column: 27 / 34;"></div>
+            </div>
+            <div class="gantt-row">
+              <span class="gantt-label">8. Impact, Manuscripts & Defence</span>
+              <div class="gantt-bar bar-mint" style="grid-column: 31 / 38;"></div>
             </div>
           </div>
 
           <!-- Key milestones -->
           <div class="milestones">
             <div class="milestone">
-              <span class="phase-label">Month 6</span>
-              <h4>Review complete</h4>
-              <p>Literature review and study design finalised. Ethics approved. Pilot sampling validated.</p>
+              <span class="phase-label">Month 9</span>
+              <h4>Assam Sampling Done</h4>
+              <p>Fresh faecal samples collected from matched breeds across village and urban HQ sites in 2 Assam districts.</p>
             </div>
             <div class="milestone">
-              <span class="phase-label">Month 12</span>
-              <h4>Samples collected</h4>
-              <p>All 200 fecal samples and matched blood/PBMC subset collected, processed, and stored at −80 °C.</p>
+              <span class="phase-label">Month 18</span>
+              <h4>Taxonomy Classified</h4>
+              <p>Metagenomics QC complete; microbial communities classified to order and genus level via QIIME 2.</p>
             </div>
             <div class="milestone">
-              <span class="phase-label">Month 24</span>
-              <h4>Data generated</h4>
-              <p>All sequencing, parasitology, and resistome screening complete. Raw data deposited and QC'd.</p>
+              <span class="phase-label">Month 28</span>
+              <h4>GO & KEGG Networks Built</h4>
+              <p>Functional annotations aligned; metabolic pathways and AMR gene networks statistically mapped.</p>
             </div>
             <div class="milestone">
               <span class="phase-label">Month 36</span>
-              <h4>Thesis defended</h4>
-              <p>Thesis submitted, manuscripts published or under review, and policy brief delivered.</p>
+              <h4>PhD Defended</h4>
+              <p>Dissertation completed, One Health policy briefs delivered, and doctoral degree successfully defended.</p>
             </div>
           </div>
 
@@ -376,6 +396,11 @@
       </section>
 
     </main>
-    <footer class="shell"><span>Angsuman Das</span><span>Dr. Kaushalendra</span><span>Dr. Awadhesh Kumar</span></footer>
+
+    <footer class="shell">
+      <span>Angsuman Das</span>
+      <span>Dr. Kaushalendra</span>
+      <span>Dr. Awadhesh Kumar</span>
+    </footer>
   </body>
 </html>
