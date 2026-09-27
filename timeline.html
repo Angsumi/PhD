@@ -142,6 +142,12 @@
         footer { display: block; }
         footer span { display: block; margin-top: 8px; }
       }
+
+      /* Media showcase */
+      .media-showcase { margin-top: 36px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--ink-2); }
+      .media-showcase img { width: 100%; height: auto; display: block; }
+      .media-caption { padding: 14px 20px; font-size: 13px; color: var(--muted); background: rgba(9,19,29,.6); border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+      .media-caption span:first-child { color: var(--soft); font-weight: 600; }
     </style>
   </head>
   <body>
@@ -389,6 +395,15 @@
               <span class="phase-label">Month 36</span>
               <h4>PhD Defended</h4>
               <p>Dissertation completed, One Health policy briefs delivered, and doctoral degree successfully defended.</p>
+            </div>
+          </div>
+
+          <!-- 8-Step Pipeline Infographic -->
+          <div class="media-showcase">
+            <img src="./images/pipeline-diagram.png" alt="8-Step Methodological Pipeline Overview" />
+            <div class="media-caption">
+              <span>Methodological Roadmap</span>
+              <span>Field Sampling → Metagenomic Sequencing → QIIME 2 → GO & KEGG Networks → One Health Translation</span>
             </div>
           </div>
 

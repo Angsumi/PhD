@@ -30,6 +30,8 @@
       .mark-icon { width: 32px; height: 32px; border: 1px solid var(--mint); border-radius: 50%; display: grid; place-items: center; color: var(--mint); font-size: 17px; }
       nav { display: flex; gap: 26px; color: var(--muted); font-size: 14px; }
       nav a:hover, nav a:focus-visible { color: var(--mint); }
+      
+      /* Hero */
       .hero { padding: 92px 0 82px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 72px; align-items: end; }
       .eyebrow { color: var(--mint); text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 800; margin: 0 0 22px; }
       h1 { max-width: 780px; margin: 0; font-size: clamp(40px, 6.5vw, 80px); line-height: 1.02; letter-spacing: -.06em; font-weight: 700; }
@@ -37,33 +39,49 @@
       .hero-side { border-left: 1px solid var(--line); padding: 16px 0 8px 28px; }
       .hero-side strong { display: block; font-size: 54px; line-height: 1; color: var(--coral); letter-spacing: -.05em; }
       .hero-side span { display: block; color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 240px; }
+      .hero-img-box { margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); height: 170px; background: var(--ink-2); }
+      .hero-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      
+      /* Sections */
       .section { padding: 92px 0; border-top: 1px solid var(--line); }
       .section-head { display: flex; justify-content: space-between; gap: 32px; align-items: end; margin-bottom: 42px; }
       h2 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; letter-spacing: -.045em; }
       .section-intro { color: var(--muted); max-width: 440px; margin: 0; }
+      
+      /* Comparison Profiles */
       .comparison { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
       .profile { padding: 34px; min-height: 360px; }
       .profile:first-child { background: rgba(165, 243, 208, .08); border-right: 1px solid var(--line); }
+      .profile-img-wrap { width: 100%; height: 210px; border-radius: 8px; overflow: hidden; margin-bottom: 22px; border: 1px solid var(--line); background: var(--ink-2); }
+      .profile-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+      .profile-img-wrap:hover img { transform: scale(1.03); }
       .profile h3 { margin: 0; font-size: 28px; letter-spacing: -.03em; }
-      .profile p { color: var(--muted); margin: 12px 0 34px; max-width: 380px; }
-      .tag { display: inline-flex; align-items: center; gap: 8px; color: var(--mint); font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; }
+      .profile p { color: var(--muted); margin: 12px 0 24px; max-width: 440px; }
+      .tag { display: inline-flex; align-items: center; gap: 8px; color: var(--mint); font-size: 13px; font-weight: 750; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; }
       .tag::before { content: ''; width: 7px; height: 7px; background: currentColor; border-radius: 50%; }
       .stray .tag { color: var(--coral); }
-      .facts { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; color: var(--soft); font-size: 15px; }
-      .facts li { padding-top: 12px; border-top: 1px solid var(--line); }
+      .facts { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; color: var(--soft); font-size: 15px; }
+      .facts li { padding-top: 10px; border-top: 1px solid var(--line); }
+      
       .bridge { margin-top: 18px; padding: 26px 30px; border: 1px solid rgba(255,155,122,.45); background: linear-gradient(90deg, rgba(255,155,122,.14), rgba(165,243,208,.08)); display: flex; justify-content: space-between; gap: 24px; align-items: center; }
       .bridge strong { font-size: 19px; }
       .bridge span { color: var(--soft); font-size: 14px; max-width: 530px; }
+      
+      /* Grids */
       .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
       .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
       .card { padding: 28px; border: 1px solid var(--line); min-height: 200px; background: var(--ink-2); display: flex; flex-direction: column; justify-content: space-between; }
       .number { color: var(--coral); font-size: 14px; font-weight: 800; letter-spacing: .1em; }
       .card h3 { margin: 18px 0 10px; font-size: 21px; line-height: 1.15; }
       .card p { color: var(--muted); margin: 0; font-size: 15px; }
+      
+      /* Signal Grid */
       .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 24px; }
       .signal-item { padding: 18px 20px; border: 1px solid var(--line); background: var(--ink-2); border-left: 3px solid var(--mint); }
       .signal-item h4 { margin: 0 0 6px; font-size: 16px; color: var(--soft); }
       .signal-item p { margin: 0; font-size: 14px; color: var(--muted); }
+      
+      /* Method / Steps */
       .method { display: grid; grid-template-columns: .75fr 1.25fr; gap: 80px; align-items: start; }
       .method-intro p { color: var(--muted); max-width: 350px; }
       .steps { border-top: 1px solid var(--line); }
@@ -74,24 +92,34 @@
       .step-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
       .step-tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 4px; background: rgba(165,243,208,.1); color: var(--mint); border: 1px solid rgba(165,243,208,.2); }
       .step-tag.coral { background: rgba(255,155,122,.1); color: var(--coral); border-color: rgba(255,155,122,.2); }
-      .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-      .evidence-card { padding: 26px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(165,243,208,.09), rgba(16,36,52,.75)); }
-      .evidence-card .number { color: var(--mint); }
-      .evidence-card h3 { margin: 20px 0 9px; font-size: 20px; line-height: 1.1; }
-      .evidence-card p { margin: 0; color: var(--muted); font-size: 15px; }
-      .evidence-card strong { color: var(--soft); font-weight: 700; }
+      
+      /* Visual Media Display */
+      .media-showcase { margin-top: 36px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--ink-2); }
+      .media-showcase img { width: 100%; height: auto; display: block; }
+      .media-caption { padding: 14px 20px; font-size: 13px; color: var(--muted); background: rgba(9,19,29,.6); border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+      .media-caption span:first-child { color: var(--soft); font-weight: 600; }
+      
+      /* Impact */
       .impact { background: var(--mint); color: var(--ink); border-top: 0; }
       .impact .section-head { align-items: start; }
       .impact .section-intro { color: #315548; }
       .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid rgba(9,19,29,.2); border-bottom: 1px solid rgba(9,19,29,.2); }
       .impact-item { padding: 30px 26px 34px 0; margin-right: 26px; border-right: 1px solid rgba(9,19,29,.2); }
       .impact-item:last-child { border-right: 0; margin-right: 0; }
+      .impact-img-box { width: 100%; height: 160px; border-radius: 6px; overflow: hidden; margin-bottom: 18px; border: 1px solid rgba(9,19,29,.25); background: rgba(9,19,29,.1); }
+      .impact-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .impact-item h3 { font-size: 21px; margin: 0 0 10px; }
       .impact-item p { margin: 0; color: #315548; font-size: 15px; }
+      
+      /* Closing */
       .closing { padding: 100px 0 112px; text-align: center; }
       .closing h2 { max-width: 860px; margin: 0 auto 26px; }
       .closing p { max-width: 640px; margin: auto; color: var(--muted); }
+      .closing-img-box { max-width: 780px; margin: 40px auto 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); height: 320px; background: var(--ink-2); }
+      .closing-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      
       footer { border-top: 1px solid var(--line); padding: 24px 0 32px; display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
+      
       @media (max-width: 860px) {
         .shell { width: min(var(--max), calc(100% - 34px)); }
         nav { display: none; }
@@ -103,10 +131,11 @@
         .profile { min-height: auto; padding: 28px; }
         .bridge { display: block; }
         .bridge span { display: block; margin-top: 10px; }
-        .grid-4, .grid-3, .evidence-grid, .impact-grid { grid-template-columns: 1fr; }
+        .grid-4, .grid-3, .impact-grid { grid-template-columns: 1fr; }
         .card { min-height: auto; }
         .impact-item { border-right: 0; border-bottom: 1px solid rgba(9,19,29,.2); margin: 0; padding: 26px 0; }
         .impact-item:last-child { border-bottom: 0; }
+        .closing-img-box { height: 220px; }
         footer { display: block; }
         footer span { display: block; margin-top: 8px; }
       }
@@ -119,6 +148,7 @@
     </header>
 
     <main id="top">
+      <!-- ── Hero Section with Visual Preview ── -->
       <section class="shell hero">
         <div>
           <p class="eyebrow">PhD research proposal · comparative metagenomics</p>
@@ -128,10 +158,13 @@
         <div class="hero-side">
           <strong>2 Districts</strong>
           <span>Assam field sampling: matched breed & gender across village domestic and urban stray populations for climatic & genetic uniformity</span>
+          <div class="hero-img-box">
+            <img src="./images/hero-cattle.jpg" alt="Cattle Gut Microbiome in Anthropogenic Environments" />
+          </div>
         </div>
       </section>
 
-      <!-- ── Two ways of living ── -->
+      <!-- ── Two ways of living (with Photos of Domestic & Stray Cattle) ── -->
       <section class="section" id="question">
         <div class="shell">
           <div class="section-head">
@@ -139,7 +172,11 @@
             <p class="section-intro">Two distinct populations living in close proximity to humans provide two answers to the same question: how does human proximity shape the animal gut microbiome?</p>
           </div>
           <div class="comparison">
+            <!-- Domestic Cattle Profile -->
             <article class="profile">
+              <div class="profile-img-wrap">
+                <img src="./images/domestic-cattle.jpg" alt="Domestic Cattle in Managed Rural Pasture" />
+              </div>
               <span class="tag">Domestic cattle</span>
               <h3>Managed proximity</h3>
               <p>Maintained under thousands of years of cultural management in structured farming systems with stable routines.</p>
@@ -150,7 +187,12 @@
                 <li>Sheltered, managed living environment</li>
               </ul>
             </article>
+
+            <!-- Urban Stray Cattle Profile -->
             <article class="profile stray">
+              <div class="profile-img-wrap">
+                <img src="./images/stray-cattle.jpg" alt="Urban Stray Cattle Scavenging in Human Settlements" />
+              </div>
               <span class="tag">Urban stray cattle</span>
               <h3>Unmanaged proximity</h3>
               <p>Free-roaming animals thriving in human settlements, navigating street environments and municipal waste streams.</p>
@@ -162,6 +204,7 @@
               </ul>
             </article>
           </div>
+
           <div class="bridge">
             <strong>Between two groups, there is a signal.</strong>
             <span>A measurable “Humanisation Signature” revealing how human-associated diets, waste, and environments reshape gut microbiota and drive resistome expansion.</span>
@@ -169,13 +212,14 @@
         </div>
       </section>
 
-      <!-- ── The Signal / Key Dimensions ── -->
+      <!-- ── The Signal / Key Dimensions with Biomarker Strategy Diagram ── -->
       <section class="section" id="signal">
         <div class="shell">
           <div class="section-head">
             <h2>Between the two groups,<br />there is a signal.</h2>
             <p class="section-intro">Capturing the measurable humanisation signature across multiple microbiological, functional, and ecological dimensions.</p>
           </div>
+
           <div class="signal-grid">
             <div class="signal-item">
               <h4>Measurable Humanisation Signature</h4>
@@ -214,10 +258,19 @@
               <p>Generate actionable evidence to support targeted livestock interventions and integrated One Health biosurveillance.</p>
             </div>
           </div>
+
+          <!-- Analytical Strategy & Biomarker Discovery Diagram -->
+          <div class="media-showcase">
+            <img src="./images/biomarker-strategy.png" alt="Analytical Strategy & Biomarker Discovery Framework" />
+            <div class="media-caption">
+              <span>Figure 1: Analytical Strategy & Biomarker Discovery</span>
+              <span>Data Acquisition → Comparative Omics → Biomarker Validation</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- ── 4 Linked Datasets ── -->
+      <!-- ── 4 Linked Datasets Framework ── -->
       <section class="section" id="framework">
         <div class="shell">
           <div class="section-head">
@@ -261,14 +314,24 @@
         </div>
       </section>
 
-      <!-- ── Step-by-Step Research Pathway ── -->
+      <!-- ── Step-by-Step Research Pathway (with Pipeline Diagram) ── -->
       <section class="section" id="pipeline">
         <div class="shell method">
           <div class="method-intro">
             <p class="eyebrow">Methodological workflow</p>
             <h2>8-step research pipeline.</h2>
             <p>From rigorous field design in Assam to high-throughput metagenomics, Gene Ontology annotation, KEGG pathway networks, and One Health impact.</p>
+            
+            <!-- Lab Analysis infographic in intro sidebar -->
+            <div class="media-showcase" style="margin-top: 28px;">
+              <img src="./images/lab-analysis.png" alt="Core Lab & Analysis Steps Diagram" />
+              <div class="media-caption">
+                <span>Core Lab & Analysis</span>
+                <span>Metagenomics · QIIME 2 · GO · KEGG</span>
+              </div>
+            </div>
           </div>
+
           <div class="steps">
             <!-- Step 1 -->
             <div class="step">
@@ -387,25 +450,51 @@
             </div>
           </div>
         </div>
+
+        <!-- 8-Step Pipeline Infographic Banner -->
+        <div class="shell" style="margin-top: 48px;">
+          <div class="media-showcase">
+            <img src="./images/pipeline-diagram.png" alt="8-Step Methodological Pipeline Diagram" />
+            <div class="media-caption">
+              <span>Figure 2: 8-Step Methodological Pipeline</span>
+              <span>Field Sampling → Metagenomic Sequencing → QIIME 2 → GO & KEGG Pathways → One Health Translation</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- ── Impact Section ── -->
+      <!-- ── Impact Section with Tri-Pillar One Health Images ── -->
       <section class="section impact" id="impact">
         <div class="shell">
           <div class="section-head">
             <h2>Why this matters<br />for One Health.</h2>
             <p class="section-intro">Bridging livestock management, urban ecology, and public health policy through rigorous metagenomic evidence.</p>
           </div>
+
           <div class="impact-grid">
+            <!-- Pillar 1: Animal / Livestock Health -->
             <article class="impact-item">
+              <div class="impact-img-box">
+                <img src="./images/onehealth-animal.jpg" alt="Animal Health & Livestock Stewardship" />
+              </div>
               <h3>Livestock Management</h3>
               <p>Support improved herd health, early detection of microbial dysbiosis, and the development of targeted, diet-informed interventions.</p>
             </article>
+
+            <!-- Pillar 2: Human Health & AMR -->
             <article class="impact-item">
+              <div class="impact-img-box">
+                <img src="./images/onehealth-human.jpg" alt="Public Health & AMR Biosurveillance" />
+              </div>
               <h3>AMR Biosurveillance</h3>
               <p>Map the penetration of antimicrobial resistance genes across municipal environments, establishing critical surveillance benchmarks.</p>
             </article>
+
+            <!-- Pillar 3: Environmental Health & Policy -->
             <article class="impact-item">
+              <div class="impact-img-box">
+                <img src="./images/onehealth-environment.jpg" alt="Environmental Health & Policy Translation" />
+              </div>
               <h3>Public Health & Policy</h3>
               <p>Inform municipal urban planning, zoonotic risk mitigation, and provide a repeatable framework for future One Health studies across regions.</p>
             </article>
@@ -413,11 +502,14 @@
         </div>
       </section>
 
-      <!-- ── Closing ── -->
+      <!-- ── Closing Section with Visual Banner ── -->
       <section class="shell closing">
         <p class="eyebrow">The central aim</p>
         <h2>Uncovering the microbial fingerprints of human proximity in cattle.</h2>
         <p>Providing evidence-based insights into how urban living, diet, and anthropogenic environments alter the bovine microbiome—advancing animal health, human safety, and environmental stewardship.</p>
+        <div class="closing-img-box">
+          <img src="./images/central-aim.jpg" alt="One Health Multi-Omics Research Vision" />
+        </div>
       </section>
     </main>
 
