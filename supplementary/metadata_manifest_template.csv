@@ -1,0 +1,7 @@
+sample_id,cohort,district,location_name,site_type,gps_latitude,gps_longitude,animal_breed,sex,estimated_age_years,body_condition_score,scavenging_observed,observed_diet_predominance,antibiotic_history_prior_90d,collection_date,collection_time,core_fecal_temp_c,preservation_reagent,storage_temp_c,extraction_batch
+CATT-KM-U01,Urban_Stray,Kamrup_Metropolitan,Paltan_Bazar_Guwahati,Market_Waste,26.1805,91.7539,Indigenous_Zebu,Female,4.5,2.5,Yes,Vegetable_Waste_Plastic_Refuse,No_Known_Exposure,2026-11-10,07:30,38.2,DNA_RNA_Shield,-80,Batch_1
+CATT-KM-U02,Urban_Stray,Kamrup_Metropolitan,Fancy_Bazar_Guwahati,Street_Refuse,26.1852,91.7410,Indigenous_Zebu,Female,5.0,2.0,Yes,Processed_Food_Grains_Paper,No_Known_Exposure,2026-11-10,08:15,38.0,DNA_RNA_Shield,-80,Batch_1
+CATT-KM-R01,Rural_Domestic,Kamrup_Rural,Hajo_Village_Dairy,Pasture_Farm,26.2412,91.5273,Indigenous_Zebu,Female,4.0,3.5,No,Fresh_Grass_Paddy_Straw,None,2026-11-11,07:00,38.4,DNA_RNA_Shield,-80,Batch_1
+CATT-KM-R02,Rural_Domestic,Kamrup_Rural,Sualkuchi_Agro,Pasture_Farm,26.2625,91.5739,Indigenous_Zebu,Female,4.5,3.0,No,Grazing_Green_Fodder,None,2026-11-11,07:45,38.3,DNA_RNA_Shield,-80,Batch_1
+CATT-DB-U01,Urban_Stray,Dibrugarh,New_Market_Dibrugarh,Market_Waste,27.4728,94.9120,Indigenous_Zebu,Female,5.0,2.5,Yes,Organic_Waste_Starch_Packaging,No_Known_Exposure,2026-11-15,08:00,38.1,DNA_RNA_Shield,-80,Batch_2
+CATT-DB-R01,Rural_Domestic,Dibrugarh_Rural,Barbaruah_Village,Pasture_Farm,27.3820,94.8610,Indigenous_Zebu,Female,4.0,3.5,No,Field_Forage_Hay,None,2026-11-16,07:15,38.5,DNA_RNA_Shield,-80,Batch_2
