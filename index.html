@@ -719,9 +719,13 @@
             <span style="font-size:12px; color:var(--nature-muted); font-weight:600;">Research Article & PhD Portal</span>
           </div>
           <div class="nature-actions-nav">
-            <a href="./journal_articles/2019_NatCommun_Liu_Fecal_resistome_cattle_associated_with_diet.pdf" target="_blank" class="btn-nature-action primary">
+            <button onclick="switchNatureTab('pane-references')" class="btn-nature-action primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Download Research Papers
+            </button>
+            <a href="./journal_articles/research_papers_vault.zip" download="research_papers_vault.zip" class="btn-nature-action" title="Download all PDFs in 1 zip bundle">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Download PDF (13.3 MB Vault)
+              ZIP (26 MB)
             </a>
           </div>
         </div>
@@ -1382,7 +1386,19 @@
       <!-- TAB PANE 7: LITERATURE VAULT -->
       <div class="panel-content" id="pane-references">
         <h2 style="font-family:var(--font-serif); font-size:26px; margin:28px 0 12px;">Literature Review Vault & Peer-Reviewed References</h2>
-        <p style="color:var(--nature-muted); margin-bottom:24px;">Direct access to downloaded open-access PDF manuscripts and BibTeX citations stored locally in the project repository.</p>
+        <p style="color:var(--nature-muted); margin-bottom:20px;">Direct access to downloaded open-access PDF manuscripts and BibTeX citations stored locally in the project repository.</p>
+
+        <!-- Bulk Download Banner -->
+        <div class="nature-card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; background:#fbfcfe; border-left:4px solid var(--nature-red); padding:16px 20px; margin-bottom:24px;">
+          <div>
+            <h4 style="margin:0 0 4px; font-size:16px; color:var(--nature-black);">Complete Research Literature Archive (15 Papers & Proposals)</h4>
+            <p style="margin:0; font-size:13px; color:var(--nature-muted);">Download the full repository of peer-reviewed PDFs and BibTeX citations bundled in one archive.</p>
+          </div>
+          <a href="./journal_articles/research_papers_vault.zip" download="research_papers_vault.zip" class="btn-nature-action primary" style="white-space:nowrap;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download All Papers (.ZIP 26 MB)
+          </a>
+        </div>
 
         <div style="display:flex; flex-direction:column; gap:16px;">
           <!-- Paper 1 -->
